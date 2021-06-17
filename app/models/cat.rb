@@ -1,5 +1,5 @@
 class Cat < ApplicationRecord
-  belongs_to :litter
+  # belongs_to :litter
   has_many_attached :images
   has_one_attached :lineage
 
