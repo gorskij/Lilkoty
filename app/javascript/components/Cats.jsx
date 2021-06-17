@@ -49,7 +49,7 @@ class Cats extends React.Component {
         <div className="py-5">
           <main className="container">
             <div className="text-right mb-3">
-              <Link to="/new_cat" className="btn custom-button">
+              <Link to="/cat" className="btn custom-button">
                 Create New Cat
               </Link>
             </div>
