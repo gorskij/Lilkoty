@@ -5,6 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+<<<<<<< HEAD
 
 Cat.create(name: 'lilka', sex: 'female', breed: 'g', status: 'bagno', breeding: 'bagno')
 Cat.create(name: 'chop', sex: 'male', breed: 'g', status: 'bagno', breeding: 'bagno')
@@ -17,3 +18,6 @@ Cat.create(name: 'maly kot', sex: 'male', status: 'bagno',
            mother_id: Cat.where(name: 'lilka').first.id,
            father_id: Cat.where(name: 'chop').first.id,
            litter_id: Litter.first.id)
+=======
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
+>>>>>>> da68d0fcc79fcbfc0fff1785430adc55b26c3a39
