@@ -25,6 +25,9 @@ gem 'activeadmin'
 gem 'haml'
 gem 'rubocop'
 gem 'devise'
+gem 'cancancan'
+gem 'draper'
+gem 'pundit'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
