@@ -1,11 +1,7 @@
 class Cat < ApplicationRecord
   belongs_to :litter, optional: true
   belongs_to :mother, class_name: 'Cat', optional: true
-  belongs_to :father, class_name: 'Cat', optional: true
-  has_many :mother_kittens, class_name: 'Cat',
-                     foreign_key: 'mother_id'
-  has_many :father_kittens, class_name: 'Cat',
-                     foreign_key: 'father_id'             
+  belongs_to :father, class_name: 'Cat', optional: true           
   has_many_attached :images
   has_one_attached :lineage
 

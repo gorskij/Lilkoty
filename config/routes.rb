@@ -4,9 +4,7 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       get 'cats/index'
-      post 'cats/create'
       get 'cats/show'
-      get 'cats/destroy'
     end
   end
   root 'homepage#index'
