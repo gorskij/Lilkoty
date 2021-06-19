@@ -45,8 +45,8 @@ ActiveRecord::Schema.define(version: 2021_06_17_122041) do
 
   create_table "cats", force: :cascade do |t|
     t.string "name"
-    t.integer "mother_id"
-    t.integer "father_id"
+    t.bigint "mother_id"
+    t.bigint "father_id"
     t.string "status"
     t.string "sex"
     t.string "colour"
@@ -56,6 +56,8 @@ ActiveRecord::Schema.define(version: 2021_06_17_122041) do
     t.datetime "date_of_birth"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.index ["father_id"], name: "index_cats_on_father_id"
+    t.index ["mother_id"], name: "index_cats_on_mother_id"
   end
 
   create_table "litters", force: :cascade do |t|
@@ -68,4 +70,6 @@ ActiveRecord::Schema.define(version: 2021_06_17_122041) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "cats", "cats", column: "father_id"
+  add_foreign_key "cats", "cats", column: "mother_id"
 end

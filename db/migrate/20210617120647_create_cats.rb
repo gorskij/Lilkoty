@@ -2,8 +2,8 @@ class CreateCats < ActiveRecord::Migration[6.1]
   def change
     create_table :cats do |t|
       t.string :name
-      t.integer :mother_id
-      t.integer :father_id
+      t.references :mother, foreign_key: { to_table: :cats }
+      t.references :father, foreign_key: { to_table: :cats }
       t.string :status
       t.string :sex
       t.string :colour
