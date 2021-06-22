@@ -1,7 +1,7 @@
 class Api::V1::CatsController < ApplicationController
   def index
-    cat = Cat.all.order(created_at: :desc)
-    render json: cat
+    cats = Cat.all.order(created_at: :desc).includes(:litter, :mother, :father)
+    render json: cats, each_serializer: CatSerializer
   end
 
   def create
@@ -28,7 +28,7 @@ class Api::V1::CatsController < ApplicationController
   private
 
   def cat_params
-    params.permit(:name, :sex, :breed, :status, :breeding, :date_of_birth)
+    params.permit(:name, :sex, :breed, :status, :breeding, :date_of_birth, images: [])
   end
   def cat
     @cat ||= Cat.find(params[:id])

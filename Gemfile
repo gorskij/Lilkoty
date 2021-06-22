@@ -28,6 +28,7 @@ gem 'devise'
 gem 'cancancan'
 gem 'draper'
 gem 'pundit'
+gem 'active_model_serializers'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

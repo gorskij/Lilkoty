@@ -22,10 +22,14 @@ class Cats extends React.Component {
   }
   render() {
     const { cats } = this.state;
+    
     const allCats = cats.map((cat, index) => (
       <div key={index} className="col-md-6 col-lg-4">
         <div className="card-body">
           <h5 className="card-title">{cat.name}</h5>
+          {cat.images_url.map((image, index) => {
+            return <img src= {image} alt="img" width ="100" />
+          })}
           <Link to={`/cat/${cat.id}`} className="btn custom-button">
             View Cat
           </Link>

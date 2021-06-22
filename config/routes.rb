@@ -8,6 +8,8 @@ Rails.application.routes.draw do
     end
   end
   root 'homepage#index'
-  get '/*path' => 'homepage#index'
+  get '*path', to: 'homepage#index', constraints: lambda { |req|
+    req.path.exclude? 'rails/active_storage'
+  }
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
