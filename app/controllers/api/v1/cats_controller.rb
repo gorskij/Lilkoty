@@ -1,6 +1,6 @@
 class Api::V1::CatsController < ApplicationController
   def index
-    cats = Cat.all.order(created_at: :desc).includes(:litter, :mother, :father)
+    cats = Cat.all.order(created_at: :desc).includes(:litter, :mother, :father).with_attached_images
     render json: cats, each_serializer: CatSerializer
   end
 
