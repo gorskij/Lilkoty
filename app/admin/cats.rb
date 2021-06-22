@@ -4,16 +4,9 @@ ActiveAdmin.register Cat do
   #
   # Uncomment all parameters which should be permitted for assignment
   #
+  menu priority: 1
   permit_params :name, :mother_id, :father_id, :status, :sex, :colour, :breed, :breeding, :litter_id, :date_of_birth,
                 images: []
-  #
-  # or
-  #
-  # permit_params do
-  #   permitted = [:name, :mother_id, :father_id, :status, :sex, :colour, :breed, :breeding, :litter_id, :date_of_birth]
-  #   permitted << :other if params[:action] == 'create' && current_user.admin?
-  #   permitted
-  # end
 
   form html: { multipart: true } do |f|
     f.inputs do
@@ -23,5 +16,4 @@ ActiveAdmin.register Cat do
       f.actions
     end
   end
-
 end
