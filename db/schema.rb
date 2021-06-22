@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_19_111904) do
+ActiveRecord::Schema.define(version: 2021_06_22_123322) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -79,7 +79,7 @@ ActiveRecord::Schema.define(version: 2021_06_19_111904) do
     t.string "breed"
     t.string "breeding"
     t.integer "litter_id"
-    t.datetime "date_of_birth"
+    t.date "date_of_birth"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["father_id"], name: "index_cats_on_father_id"
