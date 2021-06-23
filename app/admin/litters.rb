@@ -7,7 +7,7 @@ ActiveAdmin.register Litter do
   #
   menu priority: 2
   permit_params :name, :mother_id, :father_id
-  #
+  includes :mother, :father
   # or
   #
   # permit_params do
