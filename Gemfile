@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
@@ -22,13 +24,13 @@ gem 'jbuilder', '~> 2.7'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'activeadmin'
-gem 'haml'
-gem 'rubocop'
-gem 'devise'
-gem 'cancancan'
-gem 'draper'
-gem 'pundit'
 gem 'active_model_serializers'
+gem 'cancancan'
+gem 'devise'
+gem 'draper'
+gem 'haml'
+gem 'pundit'
+gem 'rubocop'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
