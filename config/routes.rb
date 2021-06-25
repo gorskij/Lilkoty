@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     namespace :v1 do
       get 'cats/index'
       get 'cats/show'
+      get 'litters/index'
+      get 'litter/show'
     end
   end
   root 'homepage#index'
