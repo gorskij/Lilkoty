@@ -8,7 +8,7 @@ Rails.application.routes.draw do
       get 'cats/index'
       get 'cats/show'
       get 'litters/index'
-      get 'litter/show'
+      get 'litters/show'
     end
   end
   root 'homepage#index'
