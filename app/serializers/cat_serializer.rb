@@ -2,8 +2,9 @@
 
 class CatSerializer < ActiveModel::Serializer
   include Rails.application.routes.url_helpers
-  attributes :id, :name, :colour, :status, :breed, :breeding, :date_of_birth, :sex, :mother, :father, :litter,
-             :images_url
+
+  attributes :id, :name, :colour, :status, :breed, :breeding, :date_of_birth, :sex, :litter_id,
+             :images_url, :mother_id, :father_id
 
   def images_url
     object.images.map do |image|

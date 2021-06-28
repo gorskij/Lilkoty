@@ -4,12 +4,26 @@ module Api
   module V1
     class LittersController < ApplicationController
       def index
-        litters = Litter.all.order(created_at: :desc).includes(:mother, :father, :kittens)
+        litters = Litter.all.order(id: :desc).includes(
+          :mother,
+          :father,
+          :kittens,
+          kittens: :images_blobs,
+          mother: :images_blobs,
+          father: :images_blobs
+        )
         render json: litters, each_serializer: LitterSerializer
       end
 
       def show
-        litter = Litter.find(params[:id])
+        litter = Litter.includes(
+          :mother,
+          :father,
+          :kittens,
+          kittens: :images_blobs,
+          mother: :images_blobs,
+          father: :images_blobs
+        ).find(params[:id])
         render json: litter, serializer: LitterSerializer
       end
     end
