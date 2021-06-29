@@ -1,5 +1,5 @@
 class LitterSerializer < ActiveModel::Serializer
-  attributes :id, :name, :mother, :father, :kittens
+  attributes :id, :name, :mother, :father, :kittens, :date_of_creation
 
   def mother
     ActiveModelSerializers::SerializableResource.new(object.mother).serializable_hash

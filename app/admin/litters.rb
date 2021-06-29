@@ -7,7 +7,7 @@ ActiveAdmin.register Litter do
   # Uncomment all parameters which should be permitted for assignment
   #
   menu priority: 2
-  permit_params :name, :mother_id, :father_id
+  permit_params :name, :mother_id, :father_id, :date_of_creation
   includes :mother, :father
   # or
   #

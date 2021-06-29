@@ -4,7 +4,7 @@ module Api
   module V1
     class LittersController < ApplicationController
       def index
-        litters = Litter.all.order(id: :desc).includes(
+        litters = Litter.all.order(date_of_creation: :desc).includes(
           :mother,
           :father,
           :kittens,
