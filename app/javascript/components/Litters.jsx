@@ -38,6 +38,7 @@ class Litters extends React.Component {
 
     return (
       <>
+        <h1 className="litters-title">Mioty</h1>
         <main className="container">
          <div className="row">{allLitters}</div>
         </main>
