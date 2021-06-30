@@ -8,7 +8,7 @@ ActiveAdmin.register Cat do
   #
   menu priority: 1
 
-  permit_params :name, :mother_id, :father_id, :status, :sex, :colour, :breed, :breeding, :litter_id, :date_of_birth,
+  permit_params :name, :mother_id, :father_id, :status, :sex, :colour, :breed, :breeding, :litter_id, :date_of_birth, :lineage_url,
                 images: []
 
   includes :mother, :father, :litter, images_attachments: :blob
