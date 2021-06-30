@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class LitterSerializer < ActiveModel::Serializer
   attributes :id, :name, :mother, :father, :kittens, :date_of_creation
 
