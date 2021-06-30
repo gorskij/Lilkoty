@@ -8,17 +8,8 @@ ActiveAdmin.register Cat do
   #
   menu priority: 1
 
-  permit_params :name, :mother_id, :father_id, :status, :sex, :colour, :breed, :breeding, :litter_id, :date_of_birth, :lineage_url,
-                images: []
+  permit_params :name, :mother_id, :father_id, :status, :sex, :colour, :breed, :breeding, :litter_id, :date_of_birth,
+                :lineage_url
 
-  includes :mother, :father, :litter, images_attachments: :blob
-
-  form html: { multipart: true } do |f|
-    f.inputs do
-      f.semantic_errors
-      f.inputs
-      f.input :images, as: :file, input_html: { multiple: true }
-      f.actions
-    end
-  end
+  includes :mother, :father, :litter
 end

@@ -4,7 +4,13 @@ import { Link } from "react-router-dom";
 class Litter extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { litter: {mother: {images_url: ''}}};
+    this.state = {
+       litter: {
+        mother: '',
+        father: '',
+        mother: {images: [{url: ''}]}
+      }
+    };
   }
 
   componentDidMount() {
@@ -33,9 +39,12 @@ class Litter extends React.Component {
     return (
       <>
           <h1 className="litter-name">
-            {litter.name}
+            {litter.mother.name}
           </h1>
-         <img src={litter.mother.images_url[3]}/>
+          <h1 className="litter-name">
+            {litter.father.name}
+          </h1>
+         <img src={litter.mother.images[0].url } width="50%" height="50%"/>
           <Link to="/litters" className="btn btn-link">
             Back to litters
           </Link>

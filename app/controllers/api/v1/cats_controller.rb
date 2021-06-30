@@ -4,12 +4,12 @@ module Api
   module V1
     class CatsController < ApplicationController
       def index
-        cats = Cat.all.order(created_at: :desc).with_attached_images
+        cats = Cat.all.includes(images: [attachment: :image_blob]).order(created_at: :desc)
         render json: cats, each_serializer: CatSerializer
       end
 
       def show
-        cat = Cat.with_attached_images.find(params[:id])
+        cat = Cat.includes(images: [attachment: :image_blob]).find(params[:id])
         render json: cat, serializer: CatSerializer
       end
     end
