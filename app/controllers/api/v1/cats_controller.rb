@@ -16,7 +16,7 @@ module Api
       def available
         cat = Cat.available.includes(images: :image_blob)
         render json: cat, each_serializer: CatSerializer
-      end   
+      end
     end
   end
 end
