@@ -8,6 +8,8 @@ class Cat < ApplicationRecord
   validates :name, :breed, :status, :breeding, presence: true
   validate :validate_sex
 
+  scope :available, -> { where(status: 'available') }
+
   private
 
   def validate_sex

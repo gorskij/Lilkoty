@@ -7,6 +7,7 @@ Rails.application.routes.draw do
     namespace :v1 do
       get 'cats/index'
       get 'cats/show'
+      get 'cats/available'
       get 'litters/index'
       get 'litters/show'
     end
