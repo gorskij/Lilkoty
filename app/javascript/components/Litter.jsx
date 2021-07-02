@@ -47,12 +47,12 @@ class Litter extends React.Component {
 
     return (
       <>  
-          <h1 className="title-of-container">Rodzice</h1>
+          <h1 className="container-title">Rodzice</h1>
           <div className="parents-flex-container">
             <CatProfileContainer cat={litter.mother}/>
             <CatProfileContainer cat={litter.father}/>
           </div>
-          <h1 className="title-of-container">Kocięta</h1>
+          <h1 className="container-title">Kocięta</h1>
           <div className="kittens-flex-container">
             {allKittens}
           </div>

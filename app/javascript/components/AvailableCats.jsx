@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from "react-router-dom";
-
+import CatProfileContainer from "./CatProfileContainer"
+import "../../assets/stylesheets/available_cats_styles.scss"
 class AvailableCats extends React.Component {
   constructor(props) {
     super(props);
@@ -25,16 +26,16 @@ class AvailableCats extends React.Component {
     
     const allCats = cats.map((cat, index) => (
       <div key={index}>
-          <h5>{cat.name}</h5>
+          <CatProfileContainer cat={cat}/>
         </div>
     ));
 
     return (
       <>
-        <h1>Available Cats</h1>
-        <main className="container">
-         <div className="row">{allCats}</div>
-        </main>
+        <h1 className="container-title">Dostępne kociaki</h1>
+        <div className="cats-flex-container">
+          {allCats}
+        </div>
       </>
     );
   }
