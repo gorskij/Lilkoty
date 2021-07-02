@@ -1,14 +1,16 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
+import CatProfileContainer from "./CatProfileContainer"
+import '../../assets/stylesheets/litter_styles.scss'
 class Litter extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
        litter: {
-        mother: '',
-        father: '',
-        mother: {images: [{url: ''}]}
+        father: {images: [{url: ''}]},
+        mother: {images: [{url: ''}]},
+        kittens: [],
+        kittens: [{images: [{url: ''}]}]
       }
     };
   }
@@ -32,19 +34,28 @@ class Litter extends React.Component {
       .then(response => this.setState({ litter: response }))
       .catch(() => this.props.history.push("/litters"));
   }
+  
 
   render() {
     const { litter } = this.state;
 
+    const allKittens = litter.kittens.map((kitten, index) => (
+      <div key={index}>
+        <CatProfileContainer cat={kitten}/>
+      </div>
+    ));
+
     return (
-      <>
-          <h1 className="litter-name">
-            {litter.mother.name}
-          </h1>
-          <h1 className="litter-name">
-            {litter.father.name}
-          </h1>
-         <img src={litter.mother.images[0].url } width="50%" height="50%"/>
+      <>  
+          <h1 className="title-of-container">Rodzice</h1>
+          <div className="parents-flex-container">
+            <CatProfileContainer cat={litter.mother}/>
+            <CatProfileContainer cat={litter.father}/>
+          </div>
+          <h1 className="title-of-container">Kocięta</h1>
+          <div className="kittens-flex-container">
+            {allKittens}
+          </div>
           <Link to="/litters" className="btn btn-link">
             Back to litters
           </Link>
