@@ -17,9 +17,9 @@ class Cat < ApplicationRecord
   end
 
   def validate_status
-    if status != 'available' && status != 'not_available'
+    if status != 'available' && status != 'not-available' && status != 'reserved'
       errors.add :base,
-                 'error status invalid, can be available or not_available'
+                 'error status invalid, can be available or not-available or reserved'
     end
   end
 end
