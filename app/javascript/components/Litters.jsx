@@ -1,12 +1,12 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import LitterProfileContainer from "./LitterProfileContainer"
 import '../../assets/stylesheets/litters_styles.scss'
-
 class Litters extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      litters: [],
+      litters: [{images: [{url: ''}]}],
     };
   }
   componentDidMount() {
@@ -23,16 +23,9 @@ class Litters extends React.Component {
   }
   render() {
     const { litters } = this.state;
-    
     const allLitters = litters.map((litter, index) => (
       <div key={index}>
-        <div className="litter-container">
-          <h5 className="litter-date_of_creation">{litter.date_of_creation}</h5>
-          <h5 className="litter-name">{litter.name}</h5>
-          <Link to={`/litter/${litter.id}`} className="btn custom-button">
-            View Litter
-          </Link>
-        </div>
+        <LitterProfileContainer litter={litter}/>
       </div>
     ));
 

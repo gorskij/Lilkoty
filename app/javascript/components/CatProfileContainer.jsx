@@ -1,14 +1,11 @@
 import React from 'react'
-import { render } from 'react-dom';
-
 class CatProfileContainer extends React.Component {
+
   constructor() {
     super();
     this.state = {
     };
   }
-
-  
 
   render(){
     const { cat } = this.props;
@@ -29,9 +26,6 @@ class CatProfileContainer extends React.Component {
       </div>
     )
   }
- 
-
- 
 }
 
 export default CatProfileContainer

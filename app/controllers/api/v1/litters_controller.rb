@@ -7,7 +7,8 @@ module Api
         litters = Litter.all.order(date_of_creation: :desc).includes(
           kittens: [images: :image_blob],
           mother: [images: :image_blob],
-          father: [images: :image_blob]
+          father: [images: :image_blob],
+          images: :image_blob
         )
         render json: litters, each_serializer: LitterSerializer
       end
@@ -16,7 +17,8 @@ module Api
         litter = Litter.includes(
           kittens: [images: :image_blob],
           mother: [images: :image_blob],
-          father: [images: :image_blob]
+          father: [images: :image_blob],
+          images: :image_blob
         ).find(params[:id])
         render json: litter, serializer: LitterSerializer
       end
