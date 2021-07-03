@@ -4,9 +4,11 @@ import Home from "../components/Home";
 import Litters from "../components/Litters"
 import Litter from "../components/Litter"
 import AvailableCats from "../components/AvailableCats";
+import Header from "../components/Header";
 
 export default (
   <Router>
+    <Header/>
     <Switch>
       <Route path="/" exact component={Home} />
       <Route path="/litters" exact component={Litters} />

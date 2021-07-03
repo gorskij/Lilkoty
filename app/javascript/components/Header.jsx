@@ -1,12 +1,17 @@
 import React from 'react'
-import '/home/kubzon/rails_projects/Lilkoty/app/assets/stylesheets/header.scss';
+import '../../assets/stylesheets/header.scss';
+import '../../assets/stylesheets/application.scss'
+import { Link } from "react-router-dom";
 
-function Header() {
-  return (
-    <div className="Header">
-      <h1>SFPOPOS</h1>
-    </div>
-  )
+class Header extends React.Component{
+  render (){
+    return (
+      <div className="Header">
+        <h1>SFPOPOS</h1>
+        <Link to='/litters'>bagno</Link>
+      </div>
+    )
+  }
 }
 
 export default Header
