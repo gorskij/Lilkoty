@@ -1,33 +1,35 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import LitterProfileContainer from "./LitterProfileContainer"
+import React from 'react'
+import LitterProfileContainer from './LitterProfileContainer'
 import '../../assets/stylesheets/litters_styles.scss'
+import PropTypes from 'prop-types'
 class Litters extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor (props) {
+    super(props)
     this.state = {
-      litters: [{images: [{url: ''}]}],
-    };
+      litters: []
+    }
   }
-  componentDidMount() {
-    const url = "/api/v1/litters/index";
+
+  componentDidMount () {
+    const url = '/api/v1/litters/index'
     fetch(url)
       .then((response) => {
         if (response.ok) {
-          return response.json();
+          return response.json()
         }
-        throw new Error("Network response was not ok.");
+        throw new Error('Network response was not ok.')
       })
       .then((response) => this.setState({ litters: response }))
-      .catch(() => this.props.history.push("/"));
+      .catch(() => this.props.history.push('/'))
   }
-  render() {
-    const { litters } = this.state;
+
+  render () {
+    const { litters } = this.state
     const allLitters = litters.map((litter, index) => (
       <div key={index}>
         <LitterProfileContainer litter={litter}/>
       </div>
-    ));
+    ))
 
     return (
       <>
@@ -36,7 +38,13 @@ class Litters extends React.Component {
          <div className="row">{allLitters}</div>
         </main>
       </>
-    );
+    )
   }
 }
-export default Litters;
+
+Litters.propTypes = {
+  match: PropTypes.func,
+  history: PropTypes.string
+}
+
+export default Litters

@@ -1,8 +1,7 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Header from "./Header";
+import React from 'react'
+import { Link } from 'react-router-dom'
 
-function HomePage() {
+function HomePage () {
   return (
     <div className="HomePage">
       <h1> HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH</h1>
@@ -10,7 +9,7 @@ function HomePage() {
         Litters
       </Link>
     </div>
-  );
+  )
 }
 
-export default HomePage;
+export default HomePage

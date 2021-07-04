@@ -1,52 +1,51 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import CatProfileContainer from "./CatProfileContainer"
+import React from 'react'
+import { Link } from 'react-router-dom'
+import CatProfileContainer from './CatProfileContainer'
 import '../../assets/stylesheets/litter_styles.scss'
+import PropTypes from 'prop-types'
 class Litter extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor (props) {
+    super(props)
     this.state = {
-       litter: {
-        father: {images: [{url: ''}]},
-        mother: {images: [{url: ''}]},
-        kittens: [],
-        kittens: [{images: [{url: ''}]}]
+      litter: {
+        father: { images: [{ url: '' }] },
+        mother: { images: [{ url: '' }] },
+        kittens: [{ images: [{ url: '' }] }]
       }
-    };
+    }
   }
 
-  componentDidMount() {
+  componentDidMount () {
     const {
       match: {
         params: { id }
       }
-    } = this.props;
+    } = this.props
 
-    const url = `/api/v1/litters/show?id=${id}`;
+    const url = `/api/v1/litters/show?id=${id}`
 
     fetch(url)
       .then(response => {
         if (response.ok) {
-          return response.json();
+          return response.json()
         }
-        throw new Error("Network response was not ok.");
+        throw new Error('Network response was not ok.')
       })
       .then(response => this.setState({ litter: response }))
-      .catch(() => this.props.history.push("/litters"));
+      .catch(() => this.props.history.push('/litters'))
   }
-  
 
-  render() {
-    const { litter } = this.state;
+  render () {
+    const { litter } = this.state
 
     const allKittens = litter.kittens.map((kitten, index) => (
       <div key={index}>
         <CatProfileContainer cat={kitten}/>
       </div>
-    ));
+    ))
 
     return (
-      <>  
+      <>
           <h1 className="container-title">Rodzice</h1>
           <div className="parents-flex-container">
             <CatProfileContainer cat={litter.mother}/>
@@ -60,9 +59,13 @@ class Litter extends React.Component {
             Back to litters
           </Link>
       </>
-    );
+    )
   }
-
 }
 
-export default Litter;
+Litter.propTypes = {
+  match: PropTypes.func,
+  history: PropTypes.string
+}
+
+export default Litter
