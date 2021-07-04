@@ -1,11 +1,13 @@
-.Header {
-  box-sizing: border-box;
-  width: 100%;
+.header {
   display: flex;
-  justify-content: center;
-  align-items: baseline;
-  padding: 1em;
-  margin-bottom: 2em;
-  background-color: rgb(192, 45, 26);
-  color: #fff;
+  text-align: center;
+  margin: auto;
+  background-color: black;
+}
+.button {
+  display: flex;
+  text-align: center;
+  margin: auto;
+  color: white;
+  flex-flow: column;
 }
