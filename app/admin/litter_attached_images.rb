@@ -3,12 +3,16 @@
 ActiveAdmin.register LitterAttachedImage do
   config.create_another = true
   menu priority: 5
-  
+
   permit_params :litter_id, :image, :role
 
   includes image_attachment: :blob
 
   form do |f|
+    if f.object.new_record? 
+      f.object.litter = Litter.first
+      f.object.role = 'default'
+    end
     f.semantic_errors
     tabs do
       tab 'Basic' do

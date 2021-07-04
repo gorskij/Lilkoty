@@ -9,6 +9,11 @@ ActiveAdmin.register CatAttachedImage do
   includes image_attachment: :blob
 
   form do |f|
+    if f.object.new_record? 
+      f.object.cat = Cat.first
+      f.object.role = 'default'
+      f.object.date = Date.today
+    end
     f.semantic_errors
     tabs do
       tab 'Basic' do
