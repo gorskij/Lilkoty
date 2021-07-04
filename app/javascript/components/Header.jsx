@@ -2,6 +2,8 @@ import React from "react";
 import "../../assets/stylesheets/header.scss";
 import "../../assets/stylesheets/application.scss";
 import { Link } from "react-router-dom";
+import YtLogo from "../../assets/images/yt-logo.png";
+import FbLogo from "../../assets/images/fb-logo.png";
 
 class Header extends React.Component {
   render() {
@@ -11,15 +13,22 @@ class Header extends React.Component {
           Home
         </Link>
         <div className="button">Nasze Koty</div>
-        <Link to="/Litters" className="button">
-          Kocięta
+        <Link to="/available_cats" className="button">
+          Dostępne Kocięta
         </Link>
-        <div className="button">Kontakt</div>
-        <div className="button">Aktualnosci</div>
+        <Link to="/litters" className="button">
+          Mioty
+        </Link>
         <div className="button">Informacje</div>
+        <div className="button">Aktualnosci</div>
+        <div className="button">Kontakt</div>
         <div className="button">
-          <div className="social-button">Facebook</div>
-          <div className="social-button">Youtube</div>
+          <a href="/litters">
+            <img src={FbLogo}></img>
+          </a>
+          <a href="https://www.youtube.com/">
+            <img src={YtLogo}></img>
+          </a>
         </div>
       </div>
     );
