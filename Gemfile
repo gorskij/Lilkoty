@@ -31,6 +31,7 @@ gem 'draper'
 gem 'haml'
 gem 'pundit'
 gem 'rubocop'
+gem 'rswag'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
