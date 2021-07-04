@@ -20,7 +20,7 @@ class AvailableCats extends React.Component {
         throw new Error('Network response was not ok.')
       })
       .then((response) => this.setState({ cats: response }))
-      .catch(() => this.props.history.push('/'))
+      .catch((error) => console.log(error))
   }
 
   render () {
@@ -44,8 +44,7 @@ class AvailableCats extends React.Component {
 }
 
 AvailableCats.propTypes = {
-  match: PropTypes.func,
-  history: PropTypes.string
+  match: PropTypes.object
 }
 
 export default AvailableCats

@@ -32,7 +32,7 @@ class Litter extends React.Component {
         throw new Error('Network response was not ok.')
       })
       .then(response => this.setState({ litter: response }))
-      .catch(() => this.props.history.push('/litters'))
+      .catch((error) => console.log(error))
   }
 
   render () {
@@ -64,8 +64,7 @@ class Litter extends React.Component {
 }
 
 Litter.propTypes = {
-  match: PropTypes.func,
-  history: PropTypes.string
+  match: PropTypes.object
 }
 
 export default Litter

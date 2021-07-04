@@ -1,7 +1,6 @@
 import React from 'react'
 import LitterProfileContainer from './LitterProfileContainer'
 import '../../assets/stylesheets/litters_styles.scss'
-import PropTypes from 'prop-types'
 class Litters extends React.Component {
   constructor (props) {
     super(props)
@@ -20,7 +19,7 @@ class Litters extends React.Component {
         throw new Error('Network response was not ok.')
       })
       .then((response) => this.setState({ litters: response }))
-      .catch(() => this.props.history.push('/'))
+      .catch((error) => console.log(error))
   }
 
   render () {
@@ -40,11 +39,6 @@ class Litters extends React.Component {
       </>
     )
   }
-}
-
-Litters.propTypes = {
-  match: PropTypes.func,
-  history: PropTypes.string
 }
 
 export default Litters
