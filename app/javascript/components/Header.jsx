@@ -1,12 +1,12 @@
-import React from "react";
-import "../../assets/stylesheets/header.scss";
-import "../../assets/stylesheets/application.scss";
-import { Link } from "react-router-dom";
-import YtLogo from "../../assets/images/yt-logo.png";
-import FbLogo from "../../assets/images/fb-logo.png";
+import React from 'react'
+import '../../assets/stylesheets/header.scss'
+import '../../assets/stylesheets/application.scss'
+import { Link } from 'react-router-dom'
+import YtLogo from '../../assets/images/yt-logo.png'
+import FbLogo from '../../assets/images/fb-logo.png'
 
 class Header extends React.Component {
-  render() {
+  render () {
     return (
       <div className="header">
         <Link to="/" className="button">
@@ -31,8 +31,8 @@ class Header extends React.Component {
           </a>
         </div>
       </div>
-    );
+    )
   }
 }
 
-export default Header;
+export default Header
