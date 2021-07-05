@@ -1,5 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import { Link } from 'react-router-dom'
 class CatProfileContainer extends React.Component {
   render () {
     const { cat } = this.props
@@ -17,7 +18,9 @@ class CatProfileContainer extends React.Component {
         <h1>{cat.name}</h1>
         <div className="cat-profile-img">{profilePicture}</div>
         <div className="cat-profile-status">{cat.status}</div>
-
+        <Link to={`/cat/${cat.id}`} className="btn custom-button">
+          View cat
+        </Link>
       </div>
     )
   }
