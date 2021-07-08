@@ -8,10 +8,10 @@ Rails.application.routes.draw do
   namespace :api do
     namespace :v1 do
       get 'cats/index'
-      get 'cats/show'
+      get 'cats/show/:id', to: 'cats#show'
       get 'cats/available'
       get 'litters/index'
-      get 'litters/show'
+      get 'litters/show/:id', to: 'litters#show'
     end
   end
   root 'homepage#index'

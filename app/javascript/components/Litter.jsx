@@ -22,7 +22,7 @@ class Litter extends React.Component {
       }
     } = this.props
 
-    const url = `/api/v1/litters/show?id=${id}`
+    const url = `/api/v1/litters/show/${id}`
 
     fetch(url)
       .then(response => {

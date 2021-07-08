@@ -19,7 +19,7 @@ RSpec.describe 'api/v1/cats', type: :request do
     end
   end
 
-  path '/api/v1/cats/show' do
+  path '/api/v1/cats/show/{id}' do
 
     get('show cat') do
       response(200, 'successful') do

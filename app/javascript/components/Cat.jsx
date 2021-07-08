@@ -17,7 +17,7 @@ class Cat extends React.Component {
       }
     } = this.props
 
-    const url = `/api/v1/cats/show?id=${id}`
+    const url = `/api/v1/cats/show/${id}`
 
     fetch(url)
       .then(response => {
