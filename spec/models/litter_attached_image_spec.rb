@@ -3,5 +3,8 @@
 require 'rails_helper'
 
 RSpec.describe LitterAttachedImage, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  let(:litter_attached_image) { FactoryBot.build(:litter_attached_image) }
+  it 'is valid with valid attributes' do
+    expect(litter_attached_image).to be_valid
+  end
 end

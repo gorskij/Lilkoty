@@ -9,7 +9,7 @@ ActiveAdmin.register LitterAttachedImage do
   includes image_attachment: :blob
 
   form do |f|
-    if f.object.new_record? 
+    if f.object.new_record?
       f.object.litter = Litter.first
       f.object.role = 'default'
     end

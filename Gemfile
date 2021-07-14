@@ -30,8 +30,8 @@ gem 'devise'
 gem 'draper'
 gem 'haml'
 gem 'pundit'
-gem 'rubocop'
 gem 'rswag'
+gem 'rubocop'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

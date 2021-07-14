@@ -7,35 +7,475 @@ paths:
   "/api/v1/cats/index":
     get:
       summary: list cats
+      tags:
+      - Cats
       responses:
         '200':
           description: successful
-  "/api/v1/cats/show":
+          content:
+            application/json:
+              example:
+              - id: 2747
+                name: cat_name
+                colour: 
+                status: available
+                breed: breed_name
+                breeding: breeding_name
+                date_of_birth: '2018-02-03'
+                sex: male
+                images: []
+                lineage_url: 
+                mother_id: 
+                father_id: 
+                litter_id: 
+              - id: 2746
+                name: cat_name
+                colour: 
+                status: available
+                breed: breed_name
+                breeding: breeding_name
+                date_of_birth: '2018-02-03'
+                sex: male
+                images: []
+                lineage_url: 
+                mother_id: 
+                father_id: 
+                litter_id: 
+              - id: 2745
+                name: cat_name
+                colour: 
+                status: available
+                breed: breed_name
+                breeding: breeding_name
+                date_of_birth: '2018-02-03'
+                sex: male
+                images: []
+                lineage_url: 
+                mother_id: 
+                father_id: 
+                litter_id: 
+              - id: 2744
+                name: cat_name
+                colour: 
+                status: available
+                breed: breed_name
+                breeding: breeding_name
+                date_of_birth: '2018-02-03'
+                sex: male
+                images: []
+                lineage_url: 
+                mother_id: 
+                father_id: 
+                litter_id: 
+              - id: 2743
+                name: cat_name
+                colour: 
+                status: available
+                breed: breed_name
+                breeding: breeding_name
+                date_of_birth: '2018-02-03'
+                sex: male
+                images: []
+                lineage_url: 
+                mother_id: 
+                father_id: 
+                litter_id: 
+              - id: 2742
+                name: cat_name
+                colour: 
+                status: unavailable
+                breed: breed_name
+                breeding: breeding_name
+                date_of_birth: '2018-02-03'
+                sex: male
+                images: []
+                lineage_url: 
+                mother_id: 
+                father_id: 
+                litter_id: 
+              - id: 2741
+                name: cat_name
+                colour: 
+                status: unavailable
+                breed: breed_name
+                breeding: breeding_name
+                date_of_birth: '2018-02-03'
+                sex: male
+                images: []
+                lineage_url: 
+                mother_id: 
+                father_id: 
+                litter_id: 
+              - id: 2740
+                name: cat_name
+                colour: 
+                status: unavailable
+                breed: breed_name
+                breeding: breeding_name
+                date_of_birth: '2018-02-03'
+                sex: male
+                images: []
+                lineage_url: 
+                mother_id: 
+                father_id: 
+                litter_id: 
+              - id: 2739
+                name: cat_name
+                colour: 
+                status: unavailable
+                breed: breed_name
+                breeding: breeding_name
+                date_of_birth: '2018-02-03'
+                sex: male
+                images: []
+                lineage_url: 
+                mother_id: 
+                father_id: 
+                litter_id: 
+              - id: 2738
+                name: cat_name
+                colour: 
+                status: unavailable
+                breed: breed_name
+                breeding: breeding_name
+                date_of_birth: '2018-02-03'
+                sex: male
+                images: []
+                lineage_url: 
+                mother_id: 
+                father_id: 
+                litter_id: 
+  "/api/v1/cats/show/{id}":
     get:
       summary: show cat
+      tags:
+      - Cats
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
       responses:
         '200':
           description: successful
+          content:
+            application/json:
+              example:
+                id: 2752
+                name: cat_name
+                colour: 
+                status: unavailable
+                breed: breed_name
+                breeding: breeding_name
+                date_of_birth: '2018-02-03'
+                sex: male
+                images: []
+                lineage_url: 
+                mother_id: 
+                father_id: 
+                litter_id: 
   "/api/v1/cats/available":
     get:
       summary: available cat
+      tags:
+      - Cats
       responses:
         '200':
           description: successful
+          content:
+            application/json:
+              example:
+              - id: 2763
+                name: cat_name
+                colour: 
+                status: available
+                breed: breed_name
+                breeding: breeding_name
+                date_of_birth: '2018-02-03'
+                sex: male
+                images: []
+                lineage_url: 
+                mother_id: 
+                father_id: 
+                litter_id: 
+              - id: 2764
+                name: cat_name
+                colour: 
+                status: available
+                breed: breed_name
+                breeding: breeding_name
+                date_of_birth: '2018-02-03'
+                sex: male
+                images: []
+                lineage_url: 
+                mother_id: 
+                father_id: 
+                litter_id: 
+              - id: 2765
+                name: cat_name
+                colour: 
+                status: available
+                breed: breed_name
+                breeding: breeding_name
+                date_of_birth: '2018-02-03'
+                sex: male
+                images: []
+                lineage_url: 
+                mother_id: 
+                father_id: 
+                litter_id: 
+              - id: 2766
+                name: cat_name
+                colour: 
+                status: available
+                breed: breed_name
+                breeding: breeding_name
+                date_of_birth: '2018-02-03'
+                sex: male
+                images: []
+                lineage_url: 
+                mother_id: 
+                father_id: 
+                litter_id: 
+              - id: 2767
+                name: cat_name
+                colour: 
+                status: available
+                breed: breed_name
+                breeding: breeding_name
+                date_of_birth: '2018-02-03'
+                sex: male
+                images: []
+                lineage_url: 
+                mother_id: 
+                father_id: 
+                litter_id: 
   "/api/v1/litters/index":
     get:
-      summary: list litters
+      summary: index
+      tags:
+      - Litters
       responses:
         '200':
           description: successful
-  "/api/v1/litters/show":
+          content:
+            application/json:
+              example:
+              - id: 89
+                name: litter_name
+                mother:
+                  id: 2768
+                  name: cat_name
+                  colour: 
+                  status: unavailable
+                  breed: breed_name
+                  breeding: breeding_name
+                  date_of_birth: '2018-02-03'
+                  sex: male
+                  images: []
+                  lineage_url: 
+                  mother_id: 
+                  father_id: 
+                  litter_id: 
+                father:
+                  id: 2769
+                  name: cat_name
+                  colour: 
+                  status: unavailable
+                  breed: breed_name
+                  breeding: breeding_name
+                  date_of_birth: '2018-02-03'
+                  sex: male
+                  images: []
+                  lineage_url: 
+                  mother_id: 
+                  father_id: 
+                  litter_id: 
+                kittens: []
+                date_of_creation: '2018-02-03'
+                images: []
+              - id: 90
+                name: litter_name
+                mother:
+                  id: 2770
+                  name: cat_name
+                  colour: 
+                  status: unavailable
+                  breed: breed_name
+                  breeding: breeding_name
+                  date_of_birth: '2018-02-03'
+                  sex: male
+                  images: []
+                  lineage_url: 
+                  mother_id: 
+                  father_id: 
+                  litter_id: 
+                father:
+                  id: 2771
+                  name: cat_name
+                  colour: 
+                  status: unavailable
+                  breed: breed_name
+                  breeding: breeding_name
+                  date_of_birth: '2018-02-03'
+                  sex: male
+                  images: []
+                  lineage_url: 
+                  mother_id: 
+                  father_id: 
+                  litter_id: 
+                kittens: []
+                date_of_creation: '2018-02-03'
+                images: []
+              - id: 91
+                name: litter_name
+                mother:
+                  id: 2772
+                  name: cat_name
+                  colour: 
+                  status: unavailable
+                  breed: breed_name
+                  breeding: breeding_name
+                  date_of_birth: '2018-02-03'
+                  sex: male
+                  images: []
+                  lineage_url: 
+                  mother_id: 
+                  father_id: 
+                  litter_id: 
+                father:
+                  id: 2773
+                  name: cat_name
+                  colour: 
+                  status: unavailable
+                  breed: breed_name
+                  breeding: breeding_name
+                  date_of_birth: '2018-02-03'
+                  sex: male
+                  images: []
+                  lineage_url: 
+                  mother_id: 
+                  father_id: 
+                  litter_id: 
+                kittens: []
+                date_of_creation: '2018-02-03'
+                images: []
+              - id: 92
+                name: litter_name
+                mother:
+                  id: 2774
+                  name: cat_name
+                  colour: 
+                  status: unavailable
+                  breed: breed_name
+                  breeding: breeding_name
+                  date_of_birth: '2018-02-03'
+                  sex: male
+                  images: []
+                  lineage_url: 
+                  mother_id: 
+                  father_id: 
+                  litter_id: 
+                father:
+                  id: 2775
+                  name: cat_name
+                  colour: 
+                  status: unavailable
+                  breed: breed_name
+                  breeding: breeding_name
+                  date_of_birth: '2018-02-03'
+                  sex: male
+                  images: []
+                  lineage_url: 
+                  mother_id: 
+                  father_id: 
+                  litter_id: 
+                kittens: []
+                date_of_creation: '2018-02-03'
+                images: []
+              - id: 93
+                name: litter_name
+                mother:
+                  id: 2776
+                  name: cat_name
+                  colour: 
+                  status: unavailable
+                  breed: breed_name
+                  breeding: breeding_name
+                  date_of_birth: '2018-02-03'
+                  sex: male
+                  images: []
+                  lineage_url: 
+                  mother_id: 
+                  father_id: 
+                  litter_id: 
+                father:
+                  id: 2777
+                  name: cat_name
+                  colour: 
+                  status: unavailable
+                  breed: breed_name
+                  breeding: breeding_name
+                  date_of_birth: '2018-02-03'
+                  sex: male
+                  images: []
+                  lineage_url: 
+                  mother_id: 
+                  father_id: 
+                  litter_id: 
+                kittens: []
+                date_of_creation: '2018-02-03'
+                images: []
+  "/api/v1/litters/show/{id}":
     get:
-      summary: show litter
+      summary: show
+      tags:
+      - Litters
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
       responses:
         '200':
           description: successful
+          content:
+            application/json:
+              example:
+                id: 98
+                name: litter_name
+                mother:
+                  id: 2786
+                  name: cat_name
+                  colour: 
+                  status: unavailable
+                  breed: breed_name
+                  breeding: breeding_name
+                  date_of_birth: '2018-02-03'
+                  sex: male
+                  images: []
+                  lineage_url: 
+                  mother_id: 
+                  father_id: 
+                  litter_id: 
+                father:
+                  id: 2787
+                  name: cat_name
+                  colour: 
+                  status: unavailable
+                  breed: breed_name
+                  breeding: breeding_name
+                  date_of_birth: '2018-02-03'
+                  sex: male
+                  images: []
+                  lineage_url: 
+                  mother_id: 
+                  father_id: 
+                  litter_id: 
+                kittens: []
+                date_of_creation: '2018-02-03'
+                images: []
 servers:
-- url: https://{defaultHost}
-  variables:
-    defaultHost:
-      default: www.example.com
+- url: "/"

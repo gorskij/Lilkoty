@@ -6,7 +6,7 @@ ActiveAdmin.register Litter do
   includes :mother, :father
 
   form do |f|
-    if f.object.new_record? 
+    if f.object.new_record?
       f.object.mother = Cat.where(sex: 'female').first
       f.object.father = Cat.where(sex: 'male').first
       f.object.date_of_creation = Date.today

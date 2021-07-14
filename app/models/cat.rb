@@ -5,7 +5,7 @@ class Cat < ApplicationRecord
   belongs_to :mother, class_name: 'Cat', optional: true
   belongs_to :father, class_name: 'Cat', optional: true
   has_many :images, class_name: 'CatAttachedImage', foreign_key: 'cat_id', dependent: :destroy
-  validates :name, :breed, :breeding, presence: true
+  validates :name, :breed, :breeding, :date_of_birth, presence: true
   validate :validate_sex, :status
 
   scope :available, -> { where(status: 'available') }
