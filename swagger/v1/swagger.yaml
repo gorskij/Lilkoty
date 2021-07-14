@@ -15,7 +15,7 @@ paths:
           content:
             application/json:
               example:
-              - id: 2747
+              - id: 2797
                 name: cat_name
                 colour: 
                 status: available
@@ -28,7 +28,7 @@ paths:
                 mother_id: 
                 father_id: 
                 litter_id: 
-              - id: 2746
+              - id: 2796
                 name: cat_name
                 colour: 
                 status: available
@@ -41,7 +41,7 @@ paths:
                 mother_id: 
                 father_id: 
                 litter_id: 
-              - id: 2745
+              - id: 2795
                 name: cat_name
                 colour: 
                 status: available
@@ -54,7 +54,7 @@ paths:
                 mother_id: 
                 father_id: 
                 litter_id: 
-              - id: 2744
+              - id: 2794
                 name: cat_name
                 colour: 
                 status: available
@@ -67,7 +67,7 @@ paths:
                 mother_id: 
                 father_id: 
                 litter_id: 
-              - id: 2743
+              - id: 2793
                 name: cat_name
                 colour: 
                 status: available
@@ -80,7 +80,7 @@ paths:
                 mother_id: 
                 father_id: 
                 litter_id: 
-              - id: 2742
+              - id: 2792
                 name: cat_name
                 colour: 
                 status: unavailable
@@ -93,7 +93,7 @@ paths:
                 mother_id: 
                 father_id: 
                 litter_id: 
-              - id: 2741
+              - id: 2791
                 name: cat_name
                 colour: 
                 status: unavailable
@@ -106,7 +106,7 @@ paths:
                 mother_id: 
                 father_id: 
                 litter_id: 
-              - id: 2740
+              - id: 2790
                 name: cat_name
                 colour: 
                 status: unavailable
@@ -119,7 +119,7 @@ paths:
                 mother_id: 
                 father_id: 
                 litter_id: 
-              - id: 2739
+              - id: 2789
                 name: cat_name
                 colour: 
                 status: unavailable
@@ -132,7 +132,7 @@ paths:
                 mother_id: 
                 father_id: 
                 litter_id: 
-              - id: 2738
+              - id: 2788
                 name: cat_name
                 colour: 
                 status: unavailable
@@ -162,7 +162,7 @@ paths:
           content:
             application/json:
               example:
-                id: 2752
+                id: 2802
                 name: cat_name
                 colour: 
                 status: unavailable
@@ -186,7 +186,7 @@ paths:
           content:
             application/json:
               example:
-              - id: 2763
+              - id: 2813
                 name: cat_name
                 colour: 
                 status: available
@@ -199,7 +199,7 @@ paths:
                 mother_id: 
                 father_id: 
                 litter_id: 
-              - id: 2764
+              - id: 2814
                 name: cat_name
                 colour: 
                 status: available
@@ -212,7 +212,7 @@ paths:
                 mother_id: 
                 father_id: 
                 litter_id: 
-              - id: 2765
+              - id: 2815
                 name: cat_name
                 colour: 
                 status: available
@@ -225,7 +225,7 @@ paths:
                 mother_id: 
                 father_id: 
                 litter_id: 
-              - id: 2766
+              - id: 2816
                 name: cat_name
                 colour: 
                 status: available
@@ -238,7 +238,7 @@ paths:
                 mother_id: 
                 father_id: 
                 litter_id: 
-              - id: 2767
+              - id: 2817
                 name: cat_name
                 colour: 
                 status: available
@@ -253,7 +253,7 @@ paths:
                 litter_id: 
   "/api/v1/litters/index":
     get:
-      summary: index
+      summary: list litters
       tags:
       - Litters
       responses:
@@ -262,10 +262,10 @@ paths:
           content:
             application/json:
               example:
-              - id: 89
+              - id: 99
                 name: litter_name
                 mother:
-                  id: 2768
+                  id: 2818
                   name: cat_name
                   colour: 
                   status: unavailable
@@ -279,7 +279,7 @@ paths:
                   father_id: 
                   litter_id: 
                 father:
-                  id: 2769
+                  id: 2819
                   name: cat_name
                   colour: 
                   status: unavailable
@@ -295,10 +295,10 @@ paths:
                 kittens: []
                 date_of_creation: '2018-02-03'
                 images: []
-              - id: 90
+              - id: 100
                 name: litter_name
                 mother:
-                  id: 2770
+                  id: 2820
                   name: cat_name
                   colour: 
                   status: unavailable
@@ -312,7 +312,7 @@ paths:
                   father_id: 
                   litter_id: 
                 father:
-                  id: 2771
+                  id: 2821
                   name: cat_name
                   colour: 
                   status: unavailable
@@ -328,10 +328,10 @@ paths:
                 kittens: []
                 date_of_creation: '2018-02-03'
                 images: []
-              - id: 91
+              - id: 101
                 name: litter_name
                 mother:
-                  id: 2772
+                  id: 2822
                   name: cat_name
                   colour: 
                   status: unavailable
@@ -345,7 +345,7 @@ paths:
                   father_id: 
                   litter_id: 
                 father:
-                  id: 2773
+                  id: 2823
                   name: cat_name
                   colour: 
                   status: unavailable
@@ -361,10 +361,10 @@ paths:
                 kittens: []
                 date_of_creation: '2018-02-03'
                 images: []
-              - id: 92
+              - id: 102
                 name: litter_name
                 mother:
-                  id: 2774
+                  id: 2824
                   name: cat_name
                   colour: 
                   status: unavailable
@@ -378,7 +378,7 @@ paths:
                   father_id: 
                   litter_id: 
                 father:
-                  id: 2775
+                  id: 2825
                   name: cat_name
                   colour: 
                   status: unavailable
@@ -394,10 +394,10 @@ paths:
                 kittens: []
                 date_of_creation: '2018-02-03'
                 images: []
-              - id: 93
+              - id: 103
                 name: litter_name
                 mother:
-                  id: 2776
+                  id: 2826
                   name: cat_name
                   colour: 
                   status: unavailable
@@ -411,7 +411,7 @@ paths:
                   father_id: 
                   litter_id: 
                 father:
-                  id: 2777
+                  id: 2827
                   name: cat_name
                   colour: 
                   status: unavailable
@@ -429,7 +429,7 @@ paths:
                 images: []
   "/api/v1/litters/show/{id}":
     get:
-      summary: show
+      summary: show litter
       tags:
       - Litters
       parameters:
@@ -444,10 +444,10 @@ paths:
           content:
             application/json:
               example:
-                id: 98
+                id: 108
                 name: litter_name
                 mother:
-                  id: 2786
+                  id: 2836
                   name: cat_name
                   colour: 
                   status: unavailable
@@ -461,7 +461,7 @@ paths:
                   father_id: 
                   litter_id: 
                 father:
-                  id: 2787
+                  id: 2837
                   name: cat_name
                   colour: 
                   status: unavailable

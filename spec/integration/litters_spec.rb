@@ -15,7 +15,7 @@ describe 'Litters API' do
   end
 
   path '/api/v1/litters/index' do
-    get('index') do
+    get('list litters') do
       tags 'Litters'
       produces 'application/json'
       response(200, 'successful') do
@@ -25,7 +25,7 @@ describe 'Litters API' do
   end
 
   path '/api/v1/litters/show/{id}' do
-    get('show') do
+    get('show litter') do
       tags 'Litters'
       produces 'application/json'
       parameter name: :id, in: :path, type: :integer, required: true

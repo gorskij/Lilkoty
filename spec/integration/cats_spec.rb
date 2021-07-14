@@ -2,7 +2,7 @@
 
 require 'swagger_helper'
 
-RSpec.describe 'api/v1/cats', type: :request do
+RSpec.describe 'Cats API', type: :request do
   let!(:cats) { FactoryBot.create_list(:cat, 5) }
   let!(:available_cats) { FactoryBot.create_list(:cat, 5, status: 'available') }
   let(:id) { cats.last.id }
