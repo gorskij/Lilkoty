@@ -1,10 +1,12 @@
 .cats-flex-container {
   text-align: center;
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
   width: 100%;
+  flex-flow: row wrap;
+  justify-content: center;
+
 }
+
 
 .container-title {
   text-align: center;

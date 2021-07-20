@@ -39,9 +39,7 @@ class Litter extends React.Component {
     const { litter } = this.state
 
     const allKittens = litter.kittens.map((kitten, index) => (
-      <div key={index}>
-        <CatProfileContainer cat={kitten}/>
-      </div>
+        <CatProfileContainer cat={kitten} key={index}/>
     ))
 
     return (
