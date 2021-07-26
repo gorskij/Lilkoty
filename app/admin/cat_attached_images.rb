@@ -12,7 +12,6 @@ ActiveAdmin.register CatAttachedImage do
     if f.object.new_record?
       f.object.cat = Cat.first
       f.object.role = 'default'
-      f.object.date = Date.today
     end
     f.semantic_errors
     tabs do

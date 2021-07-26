@@ -4,7 +4,7 @@ class CatAttachedImage < ApplicationRecord
   has_one_attached :image
   belongs_to :cat
 
-  validates :date, :cat_id, presence: true
+  validates :cat_id, presence: true
   validate :validate_if_attached
   validate :validate_role
 
