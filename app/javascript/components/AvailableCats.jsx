@@ -27,7 +27,7 @@ class AvailableCats extends React.Component {
     const { cats } = this.state
 
     const allCats = cats.map((cat, index) => (
-          <CatProfileContainer cat={cat} key={index}/>
+      <CatProfileContainer cat={cat} key={index} />
     ))
 
     return (

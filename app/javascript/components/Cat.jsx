@@ -1,6 +1,6 @@
 import React from 'react'
-
-import '../../assets/stylesheets/litter_styles.scss'
+import CatInformationContainer from './CatInformationContainer'
+import '../../assets/stylesheets/cat_styles.scss'
 import PropTypes from 'prop-types'
 class Cat extends React.Component {
   constructor (props) {
@@ -20,31 +20,32 @@ class Cat extends React.Component {
     const url = `/api/v1/cats/show/${id}`
 
     fetch(url)
-      .then(response => {
+      .then((response) => {
         if (response.ok) {
           return response.json()
         }
         throw new Error('Network response was not ok.')
       })
-      .then(response => this.setState({ cat: response }))
+      .then((response) => this.setState({ cat: response }))
       .catch((error) => console.log(error))
   }
 
   render () {
     const { cat } = this.state
-    const profilePicture = cat.images.map((image, index) => (
+    const profilePicture = cat.images.map((image, index) =>
       (() => {
         if (image.role === 'profile') {
-          return <img src={image.url} width="10%" height="10%"/>
+          return <img src={image.url} />
         }
       })()
-    ))
+    )
+    const catInformation = <CatInformationContainer cat={cat} />
 
     return (
-      <>
-      <h1 className="container-title">{cat.name}</h1>
-      {profilePicture}
-      </>
+      <div className="cat-profile-flex">
+        <div className="cat-img-profile">{profilePicture}</div>
+        {catInformation}
+      </div>
     )
   }
 }
