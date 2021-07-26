@@ -12,6 +12,8 @@ Rails.application.routes.draw do
       get 'cats/available'
       get 'litters/index'
       get 'litters/show/:id', to: 'litters#show'
+      get 'breeds/index'
+      get 'breeds/show/:id', to: 'breeds#show'
     end
   end
   root 'homepage#index'

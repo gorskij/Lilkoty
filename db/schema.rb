@@ -12,7 +12,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_210_702_171_154) do
+ActiveRecord::Schema.define(version: 20_210_726_185_351) do
   # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
 
@@ -71,6 +71,16 @@ ActiveRecord::Schema.define(version: 20_210_702_171_154) do
     t.index ['reset_password_token'], name: 'index_admin_users_on_reset_password_token', unique: true
   end
 
+  create_table 'breeds', force: :cascade do |t|
+    t.string 'name'
+    t.text 'personality'
+    t.text 'history'
+    t.text 'allergy_informations'
+    t.text 'physical_attributes'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
+  end
+
   create_table 'cat_attached_images', force: :cascade do |t|
     t.integer 'cat_id'
     t.string 'role'
@@ -86,13 +96,13 @@ ActiveRecord::Schema.define(version: 20_210_702_171_154) do
     t.string 'status'
     t.string 'sex'
     t.string 'colour'
-    t.string 'breed'
     t.string 'breeding'
     t.integer 'litter_id'
     t.date 'date_of_birth'
     t.datetime 'created_at', precision: 6, null: false
     t.datetime 'updated_at', precision: 6, null: false
     t.string 'lineage_url'
+    t.integer 'breed_id'
     t.index ['father_id'], name: 'index_cats_on_father_id'
     t.index ['mother_id'], name: 'index_cats_on_mother_id'
   end

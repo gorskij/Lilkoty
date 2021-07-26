@@ -2,7 +2,7 @@
 
 ActiveAdmin.register LitterAttachedImage do
   config.create_another = true
-  menu priority: 5
+  menu priority: 4
 
   permit_params :litter_id, :image, :role
 

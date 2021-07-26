@@ -2,7 +2,7 @@
 
 ActiveAdmin.register CatAttachedImage do
   config.create_another = true
-  menu priority: 5
+  menu priority: 2
 
   permit_params :cat_id, :date, :image, :role
 

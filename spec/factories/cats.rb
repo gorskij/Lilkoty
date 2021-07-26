@@ -3,7 +3,7 @@
 FactoryBot.define do
   factory :cat do
     name { 'cat_name' }
-    breed { 'breed_name' }
+    breed_id { create(:breed).id }
     sex { 'male' }
     status { 'unavailable' }
     date_of_birth { '2018-02-03' }

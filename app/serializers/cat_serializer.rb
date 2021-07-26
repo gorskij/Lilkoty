@@ -7,4 +7,8 @@ class CatSerializer < ActiveModel::Serializer
   def images
     ActiveModelSerializers::SerializableResource.new(object.images).serializable_hash
   end
+
+  def breed
+    ActiveModelSerializers::SerializableResource.new(object.breed).serializable_hash
+  end
 end

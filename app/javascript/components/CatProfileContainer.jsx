@@ -20,7 +20,7 @@ class CatProfileContainer extends React.Component {
         <div className="cat-profile-inf">
           <h1>{cat.name}</h1>
           <div className="cat-profile-status">Status : {cat.status}</div>
-          <div className="cat-profile-breed">Rasa : {cat.breed}</div>
+          <div className="cat-profile-breed">Rasa : {cat.breed.name}</div>
           <Link to={`/cat/${cat.id}`} className="btn custom-button">
             View cat
           </Link>

@@ -4,10 +4,10 @@ ActiveAdmin.register Cat do
   config.create_another = true
   menu priority: 1
 
-  permit_params :name, :mother_id, :father_id, :status, :sex, :colour, :breed, :breeding, :litter_id, :date_of_birth,
+  permit_params :name, :mother_id, :father_id, :status, :sex, :colour, :breed_id, :breeding, :litter_id, :date_of_birth,
                 :lineage_url
 
-  includes :mother, :father, :litter
+  includes :mother, :father, :litter, :breed
 
   form do |f|
     if f.object.new_record?
@@ -18,6 +18,7 @@ ActiveAdmin.register Cat do
       f.object.mother = Cat.where(sex: 'female').first
       f.object.father = Cat.where(sex: 'male').first
       f.object.litter = Litter.first
+      f.object.breed = Breed.first
     end
     tabs do
       tab 'Basic' do
@@ -26,7 +27,7 @@ ActiveAdmin.register Cat do
           f.input :status, as: :select, collection: %w[available not-available reserved new-home]
           f.input :sex, as: :select, collection: %w[male female]
           f.input :date_of_birth
-          f.input :breed, placeholder: 'breed'
+          f.input :breed, collection: Breed.all
           f.input :colour, placeholder: 'colour'
           f.input :breeding
           f.input :lineage_url, placeholder: 'link to lineage pdf', label: 'Lineage pdf link'
