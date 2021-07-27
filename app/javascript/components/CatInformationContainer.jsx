@@ -11,7 +11,12 @@ class CatInformationContainer extends React.Component {
         <h1 className="cat-name">{cat.name}</h1>
         <div className="cat-status">Status&nbsp;:&nbsp;{cat.status}</div>
         <div className="cat-sex">Płeć&nbsp;:&nbsp;{cat.sex}</div>
-        <div className="cat-breed">Rasa&nbsp;:&nbsp;{cat.breed.name}</div>
+        <div className="cat-breed">
+          Rasa&nbsp;:&nbsp;
+          <Link to={`/breed/${cat.breed.id}`}>
+            {cat.breed.name}
+          </Link>
+        </div>
         <div className="cat-colour">Kolor&nbsp;:&nbsp;{cat.colour}</div>
         <div className="cat-breeding">Hodowla&nbsp;:&nbsp;{cat.breeding}</div>
         <div className="cat-lineage-url">

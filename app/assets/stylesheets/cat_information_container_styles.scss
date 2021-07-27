@@ -26,7 +26,9 @@
 }
 
 .cat-breed {
-  display: block;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
   text-align: center;
   border-bottom: 1px solid #d2d1d3;
   padding: 5px;

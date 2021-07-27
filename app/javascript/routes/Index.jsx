@@ -6,6 +6,8 @@ import Litter from '../components/Litter'
 import AvailableCats from '../components/AvailableCats'
 import Header from '../components/Header'
 import Cat from '../components/Cat'
+import Breed from '../components/Breed'
+import Breeds from '../components/Breeds'
 
 export default (
   <Router>
@@ -16,6 +18,8 @@ export default (
       <Route path="/litter/:id" exact component={Litter} />
       <Route path="/cat/:id" exact component={Cat} />
       <Route path="/available_cats" exact component={AvailableCats} />
+      <Route path="/breeds" exact component={Breeds} />
+      <Route path="/breed/:id" exact component={Breed} />
     </Switch>
   </Router>
 )

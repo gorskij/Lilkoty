@@ -26,7 +26,7 @@ RSpec.describe 'Breeds API', type: :request do
 
   path '/api/v1/breeds/show/{id}' do
     get('show breed') do
-      tags 'Breed'
+      tags 'Breeds'
       produces 'application/json'
       parameter name: :id, in: :path, type: :integer, required: true
       response(200, 'successful') do

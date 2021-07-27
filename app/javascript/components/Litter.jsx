@@ -8,9 +8,9 @@ class Litter extends React.Component {
     super(props)
     this.state = {
       litter: {
-        father: { images: [{ url: '' }] },
-        mother: { images: [{ url: '' }] },
-        kittens: [{ images: [{ url: '' }] }]
+        father: { breed: '', images: [{ url: '' }] },
+        mother: { breed: '', images: [{ url: '' }] },
+        kittens: [{ breed: '', images: [{ url: '' }] }]
       }
     }
   }

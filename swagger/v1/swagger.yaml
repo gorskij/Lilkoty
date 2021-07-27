@@ -4,6 +4,70 @@ info:
   title: API V1
   version: v1
 paths:
+  "/api/v1/breeds/index":
+    get:
+      summary: list breeds
+      tags:
+      - Breeds
+      responses:
+        '200':
+          description: successful
+          content:
+            application/json:
+              example:
+              - id: 375
+                name: breed_name
+                image: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbmNCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e1e1286de133766e0af4b591d4f10acff1bbbe9e/testst.png"
+                history: history
+                physical_attributes: physical_attributes
+                allergy_informations: allergy_informations
+              - id: 374
+                name: breed_name
+                image: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbllCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f92ab41c4bed095756860de5244e28ca9e6a40d3/testst.png"
+                history: history
+                physical_attributes: physical_attributes
+                allergy_informations: allergy_informations
+              - id: 373
+                name: breed_name
+                image: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBblVCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ea5b81e1e0822ee5f3f16d52a1e94a1b6e864dff/testst.png"
+                history: history
+                physical_attributes: physical_attributes
+                allergy_informations: allergy_informations
+              - id: 372
+                name: breed_name
+                image: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBblFCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--886936eaca9decbfc12240977aed6044ea36c30e/testst.png"
+                history: history
+                physical_attributes: physical_attributes
+                allergy_informations: allergy_informations
+              - id: 371
+                name: breed_name
+                image: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbk1CIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--83c1bc77be7e19141c9c0fa728c38056225ec31c/testst.png"
+                history: history
+                physical_attributes: physical_attributes
+                allergy_informations: allergy_informations
+  "/api/v1/breeds/show/{id}":
+    get:
+      summary: show breed
+      tags:
+      - Breeds
+      parameters:
+      - name: id
+        in: path
+        required: true
+        schema:
+          type: integer
+      responses:
+        '200':
+          description: successful
+          content:
+            application/json:
+              example:
+                id: 380
+                name: breed_name
+                image: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbndCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e8ce44bf915d023dcee1bba51a8f946d586b597c/testst.png"
+                history: history
+                physical_attributes: physical_attributes
+                allergy_informations: allergy_informations
   "/api/v1/cats/index":
     get:
       summary: list cats
@@ -15,11 +79,17 @@ paths:
           content:
             application/json:
               example:
-              - id: 2797
+              - id: 335
                 name: cat_name
                 colour: 
                 status: available
-                breed: breed_name
+                breed:
+                  id: 390
+                  name: breed_name
+                  image: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBb1lCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0ad38e98292f795bc0cb75d9585668ece0608d12/testst.png"
+                  history: history
+                  physical_attributes: physical_attributes
+                  allergy_informations: allergy_informations
                 breeding: breeding_name
                 date_of_birth: '2018-02-03'
                 sex: male
@@ -28,11 +98,17 @@ paths:
                 mother_id: 
                 father_id: 
                 litter_id: 
-              - id: 2796
+              - id: 334
                 name: cat_name
                 colour: 
                 status: available
-                breed: breed_name
+                breed:
+                  id: 389
+                  name: breed_name
+                  image: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBb1VCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--63392d78ca200bd80c7980f27ab44689e1028658/testst.png"
+                  history: history
+                  physical_attributes: physical_attributes
+                  allergy_informations: allergy_informations
                 breeding: breeding_name
                 date_of_birth: '2018-02-03'
                 sex: male
@@ -41,11 +117,17 @@ paths:
                 mother_id: 
                 father_id: 
                 litter_id: 
-              - id: 2795
+              - id: 333
                 name: cat_name
                 colour: 
                 status: available
-                breed: breed_name
+                breed:
+                  id: 388
+                  name: breed_name
+                  image: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBb1FCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5d9694b83d55986527cd6738520a59c5a35edec9/testst.png"
+                  history: history
+                  physical_attributes: physical_attributes
+                  allergy_informations: allergy_informations
                 breeding: breeding_name
                 date_of_birth: '2018-02-03'
                 sex: male
@@ -54,11 +136,17 @@ paths:
                 mother_id: 
                 father_id: 
                 litter_id: 
-              - id: 2794
+              - id: 332
                 name: cat_name
                 colour: 
                 status: available
-                breed: breed_name
+                breed:
+                  id: 387
+                  name: breed_name
+                  image: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBb01CIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--497e716c755fbae7fb9ff6bda48d4c3e7345d439/testst.png"
+                  history: history
+                  physical_attributes: physical_attributes
+                  allergy_informations: allergy_informations
                 breeding: breeding_name
                 date_of_birth: '2018-02-03'
                 sex: male
@@ -67,11 +155,17 @@ paths:
                 mother_id: 
                 father_id: 
                 litter_id: 
-              - id: 2793
+              - id: 331
                 name: cat_name
                 colour: 
                 status: available
-                breed: breed_name
+                breed:
+                  id: 386
+                  name: breed_name
+                  image: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBb0lCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--22695c9d7999610c5c59790a6759c2093ac0e869/testst.png"
+                  history: history
+                  physical_attributes: physical_attributes
+                  allergy_informations: allergy_informations
                 breeding: breeding_name
                 date_of_birth: '2018-02-03'
                 sex: male
@@ -80,11 +174,17 @@ paths:
                 mother_id: 
                 father_id: 
                 litter_id: 
-              - id: 2792
+              - id: 330
                 name: cat_name
                 colour: 
                 status: unavailable
-                breed: breed_name
+                breed:
+                  id: 385
+                  name: breed_name
+                  image: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBb0VCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c71e9cea7ac6d1aac58bdcc9a75656cc24863683/testst.png"
+                  history: history
+                  physical_attributes: physical_attributes
+                  allergy_informations: allergy_informations
                 breeding: breeding_name
                 date_of_birth: '2018-02-03'
                 sex: male
@@ -93,11 +193,17 @@ paths:
                 mother_id: 
                 father_id: 
                 litter_id: 
-              - id: 2791
+              - id: 329
                 name: cat_name
                 colour: 
                 status: unavailable
-                breed: breed_name
+                breed:
+                  id: 384
+                  name: breed_name
+                  image: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBb0FCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--78450c32b0e32a94e2ef4a354781304bd6742a5b/testst.png"
+                  history: history
+                  physical_attributes: physical_attributes
+                  allergy_informations: allergy_informations
                 breeding: breeding_name
                 date_of_birth: '2018-02-03'
                 sex: male
@@ -106,11 +212,17 @@ paths:
                 mother_id: 
                 father_id: 
                 litter_id: 
-              - id: 2790
+              - id: 328
                 name: cat_name
                 colour: 
                 status: unavailable
-                breed: breed_name
+                breed:
+                  id: 383
+                  name: breed_name
+                  image: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbjhCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--05a96ed1c41171e70590c5538cb2446fcebb53b0/testst.png"
+                  history: history
+                  physical_attributes: physical_attributes
+                  allergy_informations: allergy_informations
                 breeding: breeding_name
                 date_of_birth: '2018-02-03'
                 sex: male
@@ -119,11 +231,17 @@ paths:
                 mother_id: 
                 father_id: 
                 litter_id: 
-              - id: 2789
+              - id: 327
                 name: cat_name
                 colour: 
                 status: unavailable
-                breed: breed_name
+                breed:
+                  id: 382
+                  name: breed_name
+                  image: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbjRCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0abd1ed64b6ad9ed553baba46345b603f4c7e304/testst.png"
+                  history: history
+                  physical_attributes: physical_attributes
+                  allergy_informations: allergy_informations
                 breeding: breeding_name
                 date_of_birth: '2018-02-03'
                 sex: male
@@ -132,11 +250,17 @@ paths:
                 mother_id: 
                 father_id: 
                 litter_id: 
-              - id: 2788
+              - id: 326
                 name: cat_name
                 colour: 
                 status: unavailable
-                breed: breed_name
+                breed:
+                  id: 381
+                  name: breed_name
+                  image: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBbjBCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--055c356d5db3e0e56901483119b688d4bf207b6f/testst.png"
+                  history: history
+                  physical_attributes: physical_attributes
+                  allergy_informations: allergy_informations
                 breeding: breeding_name
                 date_of_birth: '2018-02-03'
                 sex: male
@@ -162,11 +286,17 @@ paths:
           content:
             application/json:
               example:
-                id: 2802
+                id: 340
                 name: cat_name
                 colour: 
                 status: unavailable
-                breed: breed_name
+                breed:
+                  id: 395
+                  name: breed_name
+                  image: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBb3NCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0503847b25d3aabd76441674811347d2cc1c3a37/testst.png"
+                  history: history
+                  physical_attributes: physical_attributes
+                  allergy_informations: allergy_informations
                 breeding: breeding_name
                 date_of_birth: '2018-02-03'
                 sex: male
@@ -186,11 +316,17 @@ paths:
           content:
             application/json:
               example:
-              - id: 2813
+              - id: 351
                 name: cat_name
                 colour: 
                 status: available
-                breed: breed_name
+                breed:
+                  id: 406
+                  name: breed_name
+                  image: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBcFlCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2b53e89746593361d8b6bd1dfbbb19de8b536010/testst.png"
+                  history: history
+                  physical_attributes: physical_attributes
+                  allergy_informations: allergy_informations
                 breeding: breeding_name
                 date_of_birth: '2018-02-03'
                 sex: male
@@ -199,11 +335,17 @@ paths:
                 mother_id: 
                 father_id: 
                 litter_id: 
-              - id: 2814
+              - id: 352
                 name: cat_name
                 colour: 
                 status: available
-                breed: breed_name
+                breed:
+                  id: 407
+                  name: breed_name
+                  image: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBcGNCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d38de9e371d3e8ac89881e6ccbf36efeceaed66a/testst.png"
+                  history: history
+                  physical_attributes: physical_attributes
+                  allergy_informations: allergy_informations
                 breeding: breeding_name
                 date_of_birth: '2018-02-03'
                 sex: male
@@ -212,11 +354,17 @@ paths:
                 mother_id: 
                 father_id: 
                 litter_id: 
-              - id: 2815
+              - id: 353
                 name: cat_name
                 colour: 
                 status: available
-                breed: breed_name
+                breed:
+                  id: 408
+                  name: breed_name
+                  image: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBcGdCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e43796d579634e59daeb8d92a2edbd6aeed32627/testst.png"
+                  history: history
+                  physical_attributes: physical_attributes
+                  allergy_informations: allergy_informations
                 breeding: breeding_name
                 date_of_birth: '2018-02-03'
                 sex: male
@@ -225,11 +373,17 @@ paths:
                 mother_id: 
                 father_id: 
                 litter_id: 
-              - id: 2816
+              - id: 354
                 name: cat_name
                 colour: 
                 status: available
-                breed: breed_name
+                breed:
+                  id: 409
+                  name: breed_name
+                  image: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBcGtCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--b7db5d0200ae1752ab725b82ce22fa3ec98bf1d7/testst.png"
+                  history: history
+                  physical_attributes: physical_attributes
+                  allergy_informations: allergy_informations
                 breeding: breeding_name
                 date_of_birth: '2018-02-03'
                 sex: male
@@ -238,11 +392,17 @@ paths:
                 mother_id: 
                 father_id: 
                 litter_id: 
-              - id: 2817
+              - id: 355
                 name: cat_name
                 colour: 
                 status: available
-                breed: breed_name
+                breed:
+                  id: 410
+                  name: breed_name
+                  image: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBcG9CIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ddac480ac571f69791fcb1c767f61a2b1bd5b1c5/testst.png"
+                  history: history
+                  physical_attributes: physical_attributes
+                  allergy_informations: allergy_informations
                 breeding: breeding_name
                 date_of_birth: '2018-02-03'
                 sex: male
@@ -262,14 +422,20 @@ paths:
           content:
             application/json:
               example:
-              - id: 99
+              - id: 66
                 name: litter_name
                 mother:
-                  id: 2818
+                  id: 356
                   name: cat_name
                   colour: 
                   status: unavailable
-                  breed: breed_name
+                  breed:
+                    id: 411
+                    name: breed_name
+                    image: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBcHNCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--cdbe850e187b6cb9fecb72f02841580e3e34382c/testst.png"
+                    history: history
+                    physical_attributes: physical_attributes
+                    allergy_informations: allergy_informations
                   breeding: breeding_name
                   date_of_birth: '2018-02-03'
                   sex: male
@@ -279,11 +445,17 @@ paths:
                   father_id: 
                   litter_id: 
                 father:
-                  id: 2819
+                  id: 357
                   name: cat_name
                   colour: 
                   status: unavailable
-                  breed: breed_name
+                  breed:
+                    id: 412
+                    name: breed_name
+                    image: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBcHdCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--12e65b05e5784cdc9d3e92176478b63118029128/testst.png"
+                    history: history
+                    physical_attributes: physical_attributes
+                    allergy_informations: allergy_informations
                   breeding: breeding_name
                   date_of_birth: '2018-02-03'
                   sex: male
@@ -295,14 +467,20 @@ paths:
                 kittens: []
                 date_of_creation: '2018-02-03'
                 images: []
-              - id: 100
+              - id: 67
                 name: litter_name
                 mother:
-                  id: 2820
+                  id: 358
                   name: cat_name
                   colour: 
                   status: unavailable
-                  breed: breed_name
+                  breed:
+                    id: 413
+                    name: breed_name
+                    image: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBcDBCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5683c8dab473f4faaad20e710fcb36430d99fb6d/testst.png"
+                    history: history
+                    physical_attributes: physical_attributes
+                    allergy_informations: allergy_informations
                   breeding: breeding_name
                   date_of_birth: '2018-02-03'
                   sex: male
@@ -312,11 +490,17 @@ paths:
                   father_id: 
                   litter_id: 
                 father:
-                  id: 2821
+                  id: 359
                   name: cat_name
                   colour: 
                   status: unavailable
-                  breed: breed_name
+                  breed:
+                    id: 414
+                    name: breed_name
+                    image: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBcDRCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--903e5ea97194611255ab6a098b8e8cb38b1a74ab/testst.png"
+                    history: history
+                    physical_attributes: physical_attributes
+                    allergy_informations: allergy_informations
                   breeding: breeding_name
                   date_of_birth: '2018-02-03'
                   sex: male
@@ -328,14 +512,20 @@ paths:
                 kittens: []
                 date_of_creation: '2018-02-03'
                 images: []
-              - id: 101
+              - id: 68
                 name: litter_name
                 mother:
-                  id: 2822
+                  id: 360
                   name: cat_name
                   colour: 
                   status: unavailable
-                  breed: breed_name
+                  breed:
+                    id: 415
+                    name: breed_name
+                    image: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBcDhCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6d9a32676aa26a99661ff78b05d8ef87227f7bc9/testst.png"
+                    history: history
+                    physical_attributes: physical_attributes
+                    allergy_informations: allergy_informations
                   breeding: breeding_name
                   date_of_birth: '2018-02-03'
                   sex: male
@@ -345,11 +535,17 @@ paths:
                   father_id: 
                   litter_id: 
                 father:
-                  id: 2823
+                  id: 361
                   name: cat_name
                   colour: 
                   status: unavailable
-                  breed: breed_name
+                  breed:
+                    id: 416
+                    name: breed_name
+                    image: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBcUFCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--43878b1bbd8b4152bbf924cd6781e18dc8c42d2c/testst.png"
+                    history: history
+                    physical_attributes: physical_attributes
+                    allergy_informations: allergy_informations
                   breeding: breeding_name
                   date_of_birth: '2018-02-03'
                   sex: male
@@ -361,14 +557,20 @@ paths:
                 kittens: []
                 date_of_creation: '2018-02-03'
                 images: []
-              - id: 102
+              - id: 69
                 name: litter_name
                 mother:
-                  id: 2824
+                  id: 362
                   name: cat_name
                   colour: 
                   status: unavailable
-                  breed: breed_name
+                  breed:
+                    id: 417
+                    name: breed_name
+                    image: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBcUVCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0b175d3ba48d0f47b7e7471328224ba3e721c4d5/testst.png"
+                    history: history
+                    physical_attributes: physical_attributes
+                    allergy_informations: allergy_informations
                   breeding: breeding_name
                   date_of_birth: '2018-02-03'
                   sex: male
@@ -378,11 +580,17 @@ paths:
                   father_id: 
                   litter_id: 
                 father:
-                  id: 2825
+                  id: 363
                   name: cat_name
                   colour: 
                   status: unavailable
-                  breed: breed_name
+                  breed:
+                    id: 418
+                    name: breed_name
+                    image: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBcUlCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a5c113abc2d40900969aaaaf6848a6b9c251de4b/testst.png"
+                    history: history
+                    physical_attributes: physical_attributes
+                    allergy_informations: allergy_informations
                   breeding: breeding_name
                   date_of_birth: '2018-02-03'
                   sex: male
@@ -394,14 +602,20 @@ paths:
                 kittens: []
                 date_of_creation: '2018-02-03'
                 images: []
-              - id: 103
+              - id: 70
                 name: litter_name
                 mother:
-                  id: 2826
+                  id: 364
                   name: cat_name
                   colour: 
                   status: unavailable
-                  breed: breed_name
+                  breed:
+                    id: 419
+                    name: breed_name
+                    image: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBcU1CIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--419d736c5b4b13771133cab5a6464b108fad4b23/testst.png"
+                    history: history
+                    physical_attributes: physical_attributes
+                    allergy_informations: allergy_informations
                   breeding: breeding_name
                   date_of_birth: '2018-02-03'
                   sex: male
@@ -411,11 +625,17 @@ paths:
                   father_id: 
                   litter_id: 
                 father:
-                  id: 2827
+                  id: 365
                   name: cat_name
                   colour: 
                   status: unavailable
-                  breed: breed_name
+                  breed:
+                    id: 420
+                    name: breed_name
+                    image: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBcVFCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--051a47f1783936e79dacb7b7d4a3cef80608bd27/testst.png"
+                    history: history
+                    physical_attributes: physical_attributes
+                    allergy_informations: allergy_informations
                   breeding: breeding_name
                   date_of_birth: '2018-02-03'
                   sex: male
@@ -444,14 +664,20 @@ paths:
           content:
             application/json:
               example:
-                id: 108
+                id: 75
                 name: litter_name
                 mother:
-                  id: 2836
+                  id: 374
                   name: cat_name
                   colour: 
                   status: unavailable
-                  breed: breed_name
+                  breed:
+                    id: 429
+                    name: breed_name
+                    image: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBcTBCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5aca42a6125fdb47486efd69fde0ae342c0eb169/testst.png"
+                    history: history
+                    physical_attributes: physical_attributes
+                    allergy_informations: allergy_informations
                   breeding: breeding_name
                   date_of_birth: '2018-02-03'
                   sex: male
@@ -461,11 +687,17 @@ paths:
                   father_id: 
                   litter_id: 
                 father:
-                  id: 2837
+                  id: 375
                   name: cat_name
                   colour: 
                   status: unavailable
-                  breed: breed_name
+                  breed:
+                    id: 430
+                    name: breed_name
+                    image: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBcTRCIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e43429abcb97ff51d5b3f9e49527c0d91ebe2e2b/testst.png"
+                    history: history
+                    physical_attributes: physical_attributes
+                    allergy_informations: allergy_informations
                   breeding: breeding_name
                   date_of_birth: '2018-02-03'
                   sex: male
