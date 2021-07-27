@@ -5,7 +5,7 @@ ActiveAdmin.register Cat do
   menu priority: 1
 
   permit_params :name, :mother_id, :father_id, :status, :sex, :colour, :breed_id, :breeding, :litter_id, :date_of_birth,
-                :lineage_url
+                :lineage_url, :health, :personality
 
   includes :mother, :father, :litter, :breed
 
@@ -39,6 +39,13 @@ ActiveAdmin.register Cat do
           f.input :mother, as: :select, collection: Cat.where(sex: 'female')
           f.input :father, as: :select, collection: Cat.where(sex: 'male')
           f.input :litter
+        end
+      end
+
+      tab 'Additional' do
+        f.inputs 'Additional Details' do
+          f.input :health, placeholder: 'health information'
+          f.input :personality, placeholder: 'personality information'
         end
       end
       f.semantic_errors

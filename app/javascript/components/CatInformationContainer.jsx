@@ -20,9 +20,9 @@ class CatInformationContainer extends React.Component {
         <div className="cat-colour">Kolor&nbsp;:&nbsp;{cat.colour}</div>
         <div className="cat-breeding">Hodowla&nbsp;:&nbsp;{cat.breeding}</div>
         <div className="cat-lineage-url">
-          <h1>Rodowód&nbsp;:&nbsp;
+          <div>Rodowód&nbsp;:&nbsp;
             <a href={cat.lineage_url} target="_blank" rel = "noopener noreferrer">Link</a>
-          </h1>
+          </div>
         </div>
       </div>
     )

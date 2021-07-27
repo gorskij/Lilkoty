@@ -9,20 +9,14 @@ ActiveAdmin.register Breed do
   includes image_attachment: :blob
 
   form do |f|
-    if f.object.new_record?
-      f.object.name = 'name'
-      f.object.history = 'history'
-      f.object.allergy_informations = 'allergy_informations'
-      f.object.physical_attributes = 'physical_attributes'
-    end
     f.semantic_errors
     tabs do
       tab 'Basic' do
         f.inputs 'Basic Details' do
-          f.input :name
-          f.input :history
-          f.input :allergy_informations
-          f.input :physical_attributes
+          f.input :name, placeholder: 'name'
+          f.input :history, placeholder: 'history'
+          f.input :allergy_informations, placeholder: 'allergy_informations'
+          f.input :physical_attributes, placeholder: 'physical_attributes'
           f.input :image, as: :file
         end
       end

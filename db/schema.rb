@@ -12,7 +12,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_210_726_185_351) do
+ActiveRecord::Schema.define(version: 20_210_727_203_316) do
   # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
 
@@ -103,6 +103,8 @@ ActiveRecord::Schema.define(version: 20_210_726_185_351) do
     t.datetime 'updated_at', precision: 6, null: false
     t.string 'lineage_url'
     t.integer 'breed_id'
+    t.text 'health'
+    t.text 'personality'
     t.index ['father_id'], name: 'index_cats_on_father_id'
     t.index ['mother_id'], name: 'index_cats_on_mother_id'
   end

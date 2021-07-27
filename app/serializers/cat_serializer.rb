@@ -2,7 +2,7 @@
 
 class CatSerializer < ActiveModel::Serializer
   attributes :id, :name, :colour, :status, :breed, :breeding, :date_of_birth, :sex,
-             :images, :lineage_url, :mother_id, :father_id, :litter_id
+             :images, :lineage_url, :mother_id, :father_id, :litter_id, :health, :personality
 
   def images
     ActiveModelSerializers::SerializableResource.new(object.images).serializable_hash
