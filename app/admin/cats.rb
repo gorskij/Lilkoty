@@ -52,4 +52,21 @@ ActiveAdmin.register Cat do
       f.actions
     end
   end
+
+  index do
+    selectable_column
+    column :id
+    column :name
+    column :sex
+    column :breed
+    column :status
+    column :colour
+    column :mother
+    column :father
+    column :litter
+    column :breeding
+    column :date_of_birth
+    column :lineage_url
+    actions
+  end
 end

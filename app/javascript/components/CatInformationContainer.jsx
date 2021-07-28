@@ -5,7 +5,6 @@ import '../../assets/stylesheets/cat_information_container_styles.scss'
 class CatInformationContainer extends React.Component {
   render () {
     const { cat } = this.props
-
     return (
       <div className="cat-inf-container">
         <h1 className="cat-name">{cat.name}</h1>
@@ -19,11 +18,13 @@ class CatInformationContainer extends React.Component {
         </div>
         <div className="cat-colour">Kolor&nbsp;:&nbsp;{cat.colour}</div>
         <div className="cat-breeding">Hodowla&nbsp;:&nbsp;{cat.breeding}</div>
-        <div className="cat-lineage-url">
-          <div>Rodowód&nbsp;:&nbsp;
-            <a href={cat.lineage_url} target="_blank" rel = "noopener noreferrer">Link</a>
+        {cat.lineage_url.length > 0 ?
+          <div className="cat-lineage-url">
+            <div>Rodowód&nbsp;:&nbsp;
+              <a href={cat.lineage_url} target="_blank" rel="noopener noreferrer">Link</a>
+            </div>
           </div>
-        </div>
+          : null}
       </div>
     )
   }

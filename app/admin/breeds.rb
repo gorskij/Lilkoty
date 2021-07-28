@@ -4,7 +4,7 @@ ActiveAdmin.register Breed do
   config.create_another = true
   menu priority: 5
 
-  permit_params :name, :image, :history, :allergy_informations, :physical_attributes
+  permit_params :name, :image, :history, :allergy_informations, :physical_attributes, :personality
 
   includes image_attachment: :blob
 
@@ -14,6 +14,7 @@ ActiveAdmin.register Breed do
       tab 'Basic' do
         f.inputs 'Basic Details' do
           f.input :name, placeholder: 'name'
+          f.input :personality, placeholder: 'personality'
           f.input :history, placeholder: 'history'
           f.input :allergy_informations, placeholder: 'allergy_informations'
           f.input :physical_attributes, placeholder: 'physical_attributes'
@@ -28,6 +29,7 @@ ActiveAdmin.register Breed do
     attributes_table do
       row :name
       row :history
+      row :personality
       row :allergy_informations
       row :physical_attributes
       row :image do |ad|

@@ -6,7 +6,7 @@ class Cat extends React.Component {
   constructor (props) {
     super(props)
     this.state = {
-      cat: { breed: '', images: [{ url: '' }] }
+      cat: { lineage_url: '', breed: '', images: [{ url: '' }] }
     }
   }
 
