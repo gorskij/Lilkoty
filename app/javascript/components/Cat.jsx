@@ -32,18 +32,11 @@ class Cat extends React.Component {
 
   render () {
     const { cat } = this.state
-    const profilePicture = cat.images.map((image, index) =>
-      (() => {
-        if (image.role === 'profile') {
-          return <img src={image.url} />
-        }
-      })()
-    )
     const catInformation = <CatInformationContainer cat={cat} />
 
     return (
       <div className="cat-profile-flex">
-        <div className="cat-img-profile">{profilePicture}</div>
+        <div className="cat-img-profile"><img src={cat.profile_image_url}/></div>
         {catInformation}
       </div>
     )

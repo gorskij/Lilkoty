@@ -6,17 +6,9 @@ class CatProfileContainer extends React.Component {
   render () {
     const { cat } = this.props
 
-    const profilePicture = cat.images.map((image, index) => (
-      (() => {
-        if (image.role === 'profile') {
-          return <img src={image.url} className="cat-profile-img"/>
-        }
-      })()
-    ))
-
     return (
       <div className="cat-profile-container">
-        {profilePicture}
+        <img src={cat.profile_image_url} className="cat-profile-img"/>
         <div className="cat-profile-inf">
           <h1>{cat.name}</h1>
           <div className="cat-profile-status">Status : {cat.status}</div>
