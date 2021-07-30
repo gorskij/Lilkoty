@@ -8,5 +8,7 @@ FactoryBot.define do
     status { 'unavailable' }
     date_of_birth { '2018-02-03' }
     breeding { 'breeding_name' }
+    colour { 'colour' }
+    profile_image { Rack::Test::UploadedFile.new('spec/factories/testst.png', 'testst/png') }
   end
 end

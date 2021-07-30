@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 class LitterSerializer < ActiveModel::Serializer
-  attributes :id, :name, :mother, :father, :kittens, :date_of_creation, :images
+  include Rails.application.routes.url_helpers
+  attributes :id, :name, :mother, :father, :kittens, :date_of_creation, :images, :profile_image_url
 
   def mother
     ActiveModelSerializers::SerializableResource.new(object.mother).serializable_hash
@@ -17,5 +18,9 @@ class LitterSerializer < ActiveModel::Serializer
 
   def images
     ActiveModelSerializers::SerializableResource.new(object.images).serializable_hash
+  end
+
+  def profile_image_url
+    rails_blob_path(object.profile_image, only_path: true)
   end
 end

@@ -1,13 +1,15 @@
 # frozen_string_literal: true
 
 class Cat < ApplicationRecord
+  has_one_attached :profile_image
   belongs_to :litter, optional: true
   belongs_to :mother, class_name: 'Cat', optional: true
   belongs_to :father, class_name: 'Cat', optional: true
   belongs_to :breed, class_name: 'Breed'
   has_many :images, class_name: 'CatAttachedImage', foreign_key: 'cat_id', dependent: :destroy
-  validates :name, :breed_id, :breeding, :date_of_birth, presence: true
+  validates :name, :breed_id, :breeding, :date_of_birth, :colour, presence: true
   validate :validate_sex, :status
+  validates :profile_image, attached: true, content_type: ['image/png', 'image/jpg', 'image/jpeg']
 
   scope :available, -> { where(status: 'available') }
 

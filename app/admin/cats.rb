@@ -5,7 +5,7 @@ ActiveAdmin.register Cat do
   menu priority: 1
 
   permit_params :name, :mother_id, :father_id, :status, :sex, :colour, :breed_id, :breeding, :litter_id, :date_of_birth,
-                :lineage_url, :health, :personality
+                :lineage_url, :health, :personality, :profile_image
 
   includes :mother, :father, :litter, :breed
 
@@ -31,6 +31,7 @@ ActiveAdmin.register Cat do
           f.input :colour, placeholder: 'colour'
           f.input :breeding
           f.input :lineage_url, placeholder: 'link to lineage pdf', label: 'Lineage pdf link'
+          f.input :profile_image, as: :file
         end
       end
 
@@ -50,6 +51,28 @@ ActiveAdmin.register Cat do
       end
       f.semantic_errors
       f.actions
+    end
+  end
+
+  show do |_t|
+    attributes_table do
+      row :id
+      row :name
+      row :sex
+      row :status
+      row :date_of_birth
+      row :breed
+      row :mother
+      row :father
+      row :litter
+      row :colour
+      row :breeding
+      row :lineage_url
+      row :health
+      row :personality
+      row :profile_image do |ad|
+        image_tag rails_blob_path(ad.profile_image, only_path: true), size: '50%'
+      end
     end
   end
 

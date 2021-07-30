@@ -44,6 +44,8 @@ GEM
       activemodel (>= 4.1, < 6.2)
       case_transform (>= 0.2)
       jsonapi-renderer (>= 0.1.1.beta1, < 0.3)
+    active_storage_validations (0.9.5)
+      rails (>= 5.2.0)
     activeadmin (2.9.0)
       arbre (~> 1.2, >= 1.2.1)
       formtastic (>= 3.1, < 5.0)
@@ -324,6 +326,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers
+  active_storage_validations
   activeadmin
   bootsnap (>= 1.4.4)
   byebug

@@ -12,7 +12,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20_210_727_203_316) do
+ActiveRecord::Schema.define(version: 20_210_730_091_754) do
   # These are extensions that must be enabled in order to support this database
   enable_extension 'plpgsql'
 
@@ -83,7 +83,6 @@ ActiveRecord::Schema.define(version: 20_210_727_203_316) do
 
   create_table 'cat_attached_images', force: :cascade do |t|
     t.integer 'cat_id'
-    t.string 'role'
     t.date 'date'
     t.datetime 'created_at', precision: 6, null: false
     t.datetime 'updated_at', precision: 6, null: false
@@ -111,7 +110,6 @@ ActiveRecord::Schema.define(version: 20_210_727_203_316) do
 
   create_table 'litter_attached_images', force: :cascade do |t|
     t.integer 'litter_id'
-    t.string 'role'
     t.datetime 'created_at', precision: 6, null: false
     t.datetime 'updated_at', precision: 6, null: false
   end

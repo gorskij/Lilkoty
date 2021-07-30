@@ -4,21 +4,17 @@ ActiveAdmin.register CatAttachedImage do
   config.create_another = true
   menu priority: 2
 
-  permit_params :cat_id, :date, :image, :role
+  permit_params :cat_id, :date, :image
 
   includes image_attachment: :blob
 
   form do |f|
-    if f.object.new_record?
-      f.object.cat = Cat.first
-      f.object.role = 'default'
-    end
+    f.object.cat = Cat.first if f.object.new_record?
     f.semantic_errors
     tabs do
       tab 'Basic' do
         f.inputs 'Basic Details' do
           f.input :cat
-          f.input :role, as: :select, collection: %w[profile default]
           f.input :date
           f.input :image, as: :file
         end
@@ -29,7 +25,6 @@ ActiveAdmin.register CatAttachedImage do
 
   show do |_t|
     attributes_table do
-      row :role
       row :cat
       row :date
       row :image do |ad|

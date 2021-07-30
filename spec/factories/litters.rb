@@ -6,5 +6,6 @@ FactoryBot.define do
     date_of_creation { '2018-02-03' }
     mother_id { create(:cat).id }
     father_id { create(:cat).id }
+    profile_image { Rack::Test::UploadedFile.new('spec/factories/testst.png', 'testst/png') }
   end
 end
