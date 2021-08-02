@@ -3,7 +3,7 @@ import Routes from '../routes/Index'
 
 function App () {
   return (
-      <div className="application">
+    <div className="application">
         {Routes}
       </div>
   )

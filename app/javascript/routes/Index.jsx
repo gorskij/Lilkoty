@@ -6,12 +6,14 @@ import Litter from '../components/Litter'
 import AvailableCats from '../components/AvailableCats'
 import Header from '../components/Header'
 import Cat from '../components/Cat'
+import SmallScreenMenu from '../components/SmallScreenMenu'
 import Breed from '../components/Breed'
 import Breeds from '../components/Breeds'
 
 export default (
   <Router>
    <Header/>
+   <SmallScreenMenu/>
     <Switch>
       <Route path="/" exact component={Home} />
       <Route path="/litters" exact component={Litters} />

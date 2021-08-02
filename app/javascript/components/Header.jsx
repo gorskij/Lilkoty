@@ -4,28 +4,28 @@ import '../../assets/stylesheets/application.scss'
 import { Link } from 'react-router-dom'
 import YtLogo from '../../assets/images/yt-logo.png'
 import FbLogo from '../../assets/images/fb-logo.png'
-
+import { AiOutlineHome } from 'react-icons/ai'
 class Header extends React.Component {
   render () {
     return (
       <div className="header">
         <div className="nav-buttons">
-          <Link to="/" className="button">
-            Home
-          </Link>
+            <Link to="/" className="button">
+              <AiOutlineHome />
+            </Link>
           <div className="button">Nasze&nbsp;Koty</div>
           <Link to="/available_cats" className="button">
-            Dostępne&nbsp;Kocięta
+            Kocięta
           </Link>
           <div className="button">
             <div className="dropdown">
-              <div className="button">
+              <div className="dropdown-button">
                 Informacje
                 <div className="arrow-down"></div>
               </div>
               <div className="dropdown-content">
                 <a href="/litters">O Nas</a>
-                <a href="/litters">Dla Właściciela</a>
+                <a href="/litters">Poradnik</a>
                 <a href="/litters">Aktualności</a>
                 <a href="/litters">Kontakt</a>
                 <a href="/litters">Mioty</a>
@@ -43,6 +43,7 @@ class Header extends React.Component {
             </a>
           </div>
         </div>
+
       </div>
     )
   }

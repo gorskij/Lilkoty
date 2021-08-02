@@ -11,11 +11,14 @@
 .application {
   width: 100%;
   height: 100%;
+  margin-top: 20px;
 
 }
 
 .body {
+  margin: 0;
   background: rgb(161,199,233);
   font-family: 'Cormorant Garamond', serif;
   font-size: x-large;
+  font-weight: 400;
 }

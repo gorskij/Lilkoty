@@ -3,6 +3,7 @@
   background-color: 	rgb(51, 51, 51);
   font-family: 'Cormorant Garamond', serif;
   font-size: x-large;
+  text-align: center;
   width: 100%;
   a {
     text-decoration: none;
@@ -26,11 +27,21 @@
   width: 100%; 
   padding: 15px;
 }
+.dropdown-button {
+  display: flex;
+  text-align: center;
+  margin: auto;
+  color: white;
+  width: 100%; 
+
+}
 .dropdown-content {
   display: none;
   background-color: yellow;
-  min-width: 150px;
-  z-index: 1;
+  width: 100%;
+  &:hover {
+    display: flex;
+  }
 }
 .dropdown {
   position: relative;
@@ -58,9 +69,13 @@
   left: 5px;
   
 }
-.social-buttons{
+.social-buttons {
   display: inline;
   position: absolute;
   right: 40px;
-  top: 20px;
+}
+@media only screen and (max-width: 768px) {
+  .header {
+    display: none;
+  }
 }
