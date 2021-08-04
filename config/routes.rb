@@ -14,6 +14,8 @@ Rails.application.routes.draw do
       get 'litters/show/:id', to: 'litters#show'
       get 'breeds/index'
       get 'breeds/show/:id', to: 'breeds#show'
+      get 'news/index'
+      get 'news/relevant', to: 'news#relevant'
     end
   end
   root 'homepage#index'

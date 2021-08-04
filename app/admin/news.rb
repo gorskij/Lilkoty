@@ -9,9 +9,7 @@ ActiveAdmin.register News do
   includes image_attachment: :blob
 
   form do |f|
-    if f.object.new_record?
-      f.object.date = Date.today
-    end
+    f.object.date = Time.zone.today if f.object.new_record?
     f.semantic_errors
     tabs do
       tab 'Basic' do
