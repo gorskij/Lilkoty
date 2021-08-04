@@ -9,7 +9,7 @@ ActiveAdmin.register Litter do
     if f.object.new_record?
       f.object.mother = Cat.where(sex: 'female').first
       f.object.father = Cat.where(sex: 'male').first
-      f.object.date_of_creation = Date.today
+      f.object.date_of_creation = Time.zone.today
     end
     tabs do
       tab 'Basic' do

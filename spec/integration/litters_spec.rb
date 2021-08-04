@@ -2,9 +2,10 @@
 
 require 'swagger_helper'
 
-describe 'Litters API' do
-  let!(:litters) { FactoryBot.create_list(:litter, 5) }
-  let(:id) { litters.last.id }
+describe 'Litters' do
+  before { FactoryBot.create_list(:litter, 5) }
+
+  let(:id) { Litter.last.id }
 
   after do |example|
     example.metadata[:response][:content] = {

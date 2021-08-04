@@ -33,6 +33,8 @@ gem 'haml'
 gem 'pundit'
 gem 'rswag'
 gem 'rubocop'
+gem 'rubocop-rails'
+gem 'rubocop-rspec'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

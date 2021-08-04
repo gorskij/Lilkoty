@@ -1,0 +1,25 @@
+require:
+  - rubocop-rspec
+  - rubocop-rails
+
+Lint/MissingSuper:
+  Exclude:
+    - 'app/services/**/*'
+
+Style/Documentation:
+  Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - 'db/schema.rb'
+    - 'spec/**/*.rb'
+    - 'app/admin/*.rb'
+
+AllCops:
+  NewCops: enable
+  Exclude:
+    - 'bin/bundle'
+    - 'node_modules/**/*'
+    - 'config/**/*.rb'
+    - 'db/migrate/*.rb'
+

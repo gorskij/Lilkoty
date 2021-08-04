@@ -2,10 +2,8 @@
 
 require 'swagger_helper'
 
-RSpec.describe 'Cats API', type: :request do
-  let!(:cats) { FactoryBot.create_list(:cat, 5) }
-  let!(:available_cats) { FactoryBot.create_list(:cat, 5, status: 'available') }
-  let(:id) { cats.last.id }
+RSpec.describe 'Cats', type: :request do
+  before { FactoryBot.create_list(:cat, 5, status: 'available') }
 
   after do |example|
     example.metadata[:response][:content] = {
@@ -26,6 +24,7 @@ RSpec.describe 'Cats API', type: :request do
   end
 
   path '/api/v1/cats/show/{id}' do
+    let(:id) { Cat.last.id }
     get('show cat') do
       tags 'Cats'
       produces 'application/json'

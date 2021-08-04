@@ -12,7 +12,7 @@ ActiveAdmin.register Cat do
   form do |f|
     if f.object.new_record?
       f.object.status = 'available'
-      f.object.date_of_birth = Date.today
+      f.object.date_of_birth = Time.zone.today
       f.object.sex = 'male'
       f.object.breeding = 'Lilkoty'
       f.object.mother = Cat.where(sex: 'female').first

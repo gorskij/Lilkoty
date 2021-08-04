@@ -2,9 +2,10 @@
 
 require 'swagger_helper'
 
-RSpec.describe 'Breeds API', type: :request do
-  let!(:breeds) { FactoryBot.create_list(:breed, 5) }
-  let(:id) { breeds.last.id }
+RSpec.describe 'Breeds', type: :request do
+  before { FactoryBot.create_list(:breed, 5) }
+
+  let(:id) { Breed.last.id }
 
   after do |example|
     example.metadata[:response][:content] = {
