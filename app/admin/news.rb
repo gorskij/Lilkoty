@@ -4,7 +4,7 @@ ActiveAdmin.register News do
   config.create_another = true
   menu priority: 6
 
-  permit_params :title, :image, :content, :video_url, :pin, :date
+  permit_params :title, :image, :content, :video_url, :date
 
   includes image_attachment: :blob
 
@@ -18,7 +18,6 @@ ActiveAdmin.register News do
           f.input :content, placeholder: 'content'
           f.input :video_url, placeholder: 'video_url'
           f.input :date
-          f.input :pin, as: :boolean
           f.input :image, as: :file
         end
       end
@@ -30,7 +29,6 @@ ActiveAdmin.register News do
     attributes_table do
       row :title
       row :content
-      row :pin
       row :video_url
       row :date
       row :image do |ad|
