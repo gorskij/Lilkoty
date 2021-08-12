@@ -21,6 +21,9 @@
     "webpack-cli": "^3.3.12"
   },
   "version": "0.1.0",
+  "engines": {
+    "node": "12.x"
+  },
   "devDependencies": {
     "eslint": "^7.30.0",
     "eslint-config-google": "^0.14.0",
