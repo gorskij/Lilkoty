@@ -31,11 +31,11 @@ gem 'devise'
 gem 'draper'
 gem 'haml'
 gem 'pundit'
+gem 'rspec-rails'
 gem 'rswag'
 gem 'rubocop'
 gem 'rubocop-rails'
 gem 'rubocop-rspec'
-gem 'rspec-rails'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 

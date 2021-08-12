@@ -1,0 +1,30 @@
+{
+  "Index.css": "/packs/css/Index-65af28a1.css",
+  "Index.js": "/packs/js/Index-6e959d60ac0e41bc958b.js",
+  "Index.js.map": "/packs/js/Index-6e959d60ac0e41bc958b.js.map",
+  "application.js": "/packs/js/application-b2a70986ce0516a745bc.js",
+  "application.js.map": "/packs/js/application-b2a70986ce0516a745bc.js.map",
+  "entrypoints": {
+    "application": {
+      "js": [
+        "/packs/js/application-b2a70986ce0516a745bc.js"
+      ],
+      "js.map": [
+        "/packs/js/application-b2a70986ce0516a745bc.js.map"
+      ]
+    },
+    "Index": {
+      "css": [
+        "/packs/css/Index-65af28a1.css"
+      ],
+      "js": [
+        "/packs/js/Index-6e959d60ac0e41bc958b.js"
+      ],
+      "js.map": [
+        "/packs/js/Index-6e959d60ac0e41bc958b.js.map"
+      ]
+    }
+  },
+  "media/images/fb-logo.png": "/packs/media/images/fb-logo-8ebddc22.png",
+  "media/images/yt-logo.png": "/packs/media/images/yt-logo-eaf13d64.png"
+}
