@@ -35,6 +35,7 @@ module Lilkoty
     # config.eager_load_paths << Rails.root.join("extras")
 
     # Don't generate system test files.
+    config.serve_static_assets = true
     config.generators.system_tests = nil
     config.active_storage.replace_on_assign_to_many = false
   end
