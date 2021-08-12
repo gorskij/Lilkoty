@@ -1,0 +1,24 @@
+.custom-button.btn {
+  background-color: #293241;
+  color: #fff;
+  border: none;
+}
+.custom-button.btn:hover {
+  color: rgb(255, 0, 0) !important;
+  border: none;
+}
+
+.application {
+  width: 100%;
+  height: 100%;
+  margin-top: 20px;
+
+}
+
+.body {
+  margin: 0;
+  background: rgb(161,199,233);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: x-large;
+  font-weight: 400;
+}
