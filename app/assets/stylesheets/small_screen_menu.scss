@@ -4,12 +4,15 @@
 @media only screen and (max-width: 768px) {
 
   .head {
-    background-color: white;
+    background-color: var(--background-brown-trans);
     text-align: center;
     position: fixed;
     z-index: 999;
     width: 100%;
+    height: var(--height);
     display: block;
+    color: white;
+    box-sizing: border-box;
   }
   .nav-toggle {
     display: none;
@@ -21,39 +24,20 @@
     margin-left: 1em;
     height: 100%;
     display: flex;
+    flex-direction: column;
     align-items: center;
-  }
-  .nav-toggle-label span,
-  .nav-toggle-label span::before,
-  .nav-toggle-label span::after {
-    display:block;
-    background-color: black;
-    height: 2px;
-    width: 1em;
-    border-radius: 2px;
-    position: relative;
-  }
-  .nav-toggle-label span::before,
-  .nav-toggle-label span::after {
-    content: '';
-    position: absolute;
-  }
-  .nav-toggle-label span::before {
-    bottom: 7px;
-  }
-  .nav-toggle-label span::after {
-    top: 7px;
+    cursor: pointer;
   }
   nav {
     position: absolute;
     text-align: left;
     top: 100%;
     left: 0;
-    background-color: white;
     width: 100%;
     transform: scale(1,0);
     transform-origin: top;
     transition: transform 400ms ease-in-out;
+    background-color: 	var(--background-brown-trans);
   }
   nav ul {
     margin: 0;
@@ -61,19 +45,42 @@
     list-style: none;
   }
   nav li {
-    margin-bottom: 1em;
-    margin-left: 1em;
+    padding-top: 0.25em;
+    padding-bottom: 0.25em;
+    padding-left: 1em;
+    width: 100%;
+    &:active {
+      background-color: 	rgb(45, 45, 45); 
+    }
   }
   nav a{
-    color: black;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    color: var(--white-color);
     text-decoration: none;
     font-size: 1.2rem;
     text-transform: uppercase;
     opacity: 0;
     transition: opacity 150ms ease-in-out;
+    &:hover {
+      color: var(--white-color);
+    }
   }
-  nav a:hover {
-    color: yellow;
+  nav a::after {
+    display: block;
+    transform: scale(0,1);
+    transition: transform ease-in-out 250ms;
+    content: "";
+    height: 2px;
+    background-color: var(--background-white);
+    width: 5%;
+    position: relative;
+    left: 5px;
+    border-radius: 19px;
+  }
+  nav a:hover::after {
+    transform: scale(1,1);
   }
   .nav-toggle:checked ~ nav {
     transform: scale(1,1);
@@ -81,5 +88,27 @@
   .nav-toggle:checked ~ nav a {
     opacity: 1;
     transition: opacity 250ms ease-in-out 250ms;
+  }
+  .bar {
+    width: 35px;
+    height: 2px;
+    background-color: var(--white-color);
+    margin: 3px 0;
+    position: relative;
+    top: 8px;
+    left: -13px;
+    opacity: 1;
+    transition: opacity 0.4s ease-in-out 250ms, transform 0.5s; 
+  }
+
+  .nav-toggle:checked ~ label div:first-child {
+    transform: rotate(-45deg) translate(-3px, 10px);
+  }
+  .nav-toggle:checked ~ label div:last-child {
+    transform: rotate(45deg) translate(-1px, -9px);
+  }
+  .nav-toggle:checked ~ label div:nth-of-type(2) {
+    opacity: 0;
+    transition: opacity 0.3s;
   }
 }

@@ -14,14 +14,16 @@ export default (
   <Router>
    <Header/>
    <SmallScreenMenu/>
-    <Switch>
-      <Route path="/" exact component={Home} />
-      <Route path="/litters" exact component={Litters} />
-      <Route path="/litter/:id" exact component={Litter} />
-      <Route path="/cat/:id" exact component={Cat} />
-      <Route path="/available_cats" exact component={AvailableCats} />
-      <Route path="/breeds" exact component={Breeds} />
-      <Route path="/breed/:id" exact component={Breed} />
-    </Switch>
+   <div className="content">
+      <Switch>
+        <Route path="/" exact component={Home} />
+        <Route path="/litters" exact component={Litters} />
+        <Route path="/litter/:id" exact component={Litter} />
+        <Route path="/cat/:id" exact component={Cat} />
+        <Route path="/available_cats" exact component={AvailableCats} />
+        <Route path="/breeds" exact component={Breeds} />
+        <Route path="/breed/:id" exact component={Breed} />
+      </Switch>
+    </div>
   </Router>
 )

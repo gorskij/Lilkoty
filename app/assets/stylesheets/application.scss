@@ -1,3 +1,10 @@
+:root {
+  --height: 38px;
+  --background-brown-trans:rgb(51, 51, 51, 0.95);
+  --white-color:  rgb(230,230,230);
+  --background-brown: rgb(51, 51, 51);
+  --background-white: rgb(250,235,215);
+}
 .custom-button.btn {
   background-color: #293241;
   color: #fff;
@@ -11,13 +18,17 @@
 .application {
   width: 100%;
   height: 100%;
-  margin-top: 20px;
+  overflow-y: visible;
+  overflow-x: hidden;
 
+}
+.content {
+  margin-top: var(--height);
 }
 
 .body {
   margin: 0;
-  background: rgb(161,199,233);
+  background: var(--background-white);
   font-family: 'Cormorant Garamond', serif;
   font-size: x-large;
   font-weight: 400;
