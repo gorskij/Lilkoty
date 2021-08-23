@@ -41,14 +41,14 @@
     transform: scale(1,1);
   }
 }
-.button-soc {
-  display: flex;
-  text-align: center;
-  margin: auto;
-  color: var(--white-color);
-  width: 100%; 
-  padding: 15px;
-}
+// .button-soc {
+//   display: flex;
+//   text-align: center;
+//   margin: auto;
+//   color: var(--white-color);
+//   width: 100%; 
+//   padding: 15px;
+// }
 .dropdown-button {
   display: flex;
   text-align: center;
@@ -119,9 +119,13 @@
   
 }
 .social-buttons {
-  display: inline;
-  position: absolute;
-  right: 40px;
+  display: flex;
+  width: 100%;
+  position: relative;
+  justify-content: flex-end;
+  flex-flow: row wrap;
+  top: 18px;
+  right: 15px;
 }
 @media only screen and (max-width: 768px) {
   .header {

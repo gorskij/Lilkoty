@@ -70,14 +70,12 @@ class Header extends React.Component {
           </div>
         </div>
         <div className="social-buttons">
-          <div className="button-soc">
-            <a onClick={this.handleClick}>
-              <img src={FbLogo}></img>
-            </a>
-            <a href="https://www.youtube.com/">
-              <img src={YtLogo}></img>
-            </a>
-          </div>
+          <a onClick={this.handleClick}>
+            <img src={FbLogo}></img>
+          </a>
+          <a href="https://www.youtube.com/">
+            <img src={YtLogo}></img>
+          </a>
         </div>
 
       </div>
