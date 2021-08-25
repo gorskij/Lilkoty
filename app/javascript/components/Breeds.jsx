@@ -1,5 +1,5 @@
 import React from 'react'
-import BreedContainer from './BreedContainer'
+import BreedCard from './BreedCard'
 import '../../assets/stylesheets/breeds_styles.scss'
 class Breeds extends React.Component {
   constructor (props) {
@@ -25,7 +25,7 @@ class Breeds extends React.Component {
   render () {
     const { breeds } = this.state
     const allBreeds = breeds.map((breed, index) => (
-        <BreedContainer breed={breed} key={index}/>
+        <BreedCard breed={breed} key={index}/>
     ))
 
     return (

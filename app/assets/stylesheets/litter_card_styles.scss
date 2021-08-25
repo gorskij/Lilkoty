@@ -1,0 +1,31 @@
+.litter-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: rgb(123, 159, 236);
+  border: 3px solid rgb(128, 46, 46);
+  margin: 5px;
+  padding: 20px;
+}
+
+.litter-name {
+  width: 30%;
+  padding: 5px 0 0 0;
+  font-family: 'Verdana'; 
+  text-align: center;
+  color: rgb(34, 46, 61);
+}
+
+.litter-date_of_creation {
+  text-align: center;
+  width: 30%;
+  color: rgb(110, 8, 170)
+}
+
+.litters-title {
+  text-align: center
+}
+
+.litter-profile-img {
+  width: 30%;
+}

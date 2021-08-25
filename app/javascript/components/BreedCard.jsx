@@ -1,13 +1,13 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
-import '../../assets/stylesheets/breed_container_styles.scss'
-class BreedContainer extends React.Component {
+import '../../assets/stylesheets/breed_card_styles.scss'
+class BreedCard extends React.Component {
   render () {
     const { breed } = this.props
 
     return (
-      <div className="breed-container">
+      <div className="breed-card">
           <h1>{breed.name}</h1>
           <Link to={`/breed/${breed.id}`} className="btn custom-button">
             Zobacz Rasę
@@ -17,7 +17,7 @@ class BreedContainer extends React.Component {
   }
 }
 
-BreedContainer.propTypes = {
+BreedCard.propTypes = {
   breed: PropTypes.object
 }
-export default BreedContainer
+export default BreedCard
