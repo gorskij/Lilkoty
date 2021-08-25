@@ -1,5 +1,5 @@
 import React from 'react'
-import LitterProfileContainer from './LitterProfileContainer'
+import LitterCard from './LitterCard'
 import '../../assets/stylesheets/litters_styles.scss'
 class Litters extends React.Component {
   constructor (props) {
@@ -26,7 +26,7 @@ class Litters extends React.Component {
     const { litters } = this.state
     const allLitters = litters.map((litter, index) => (
       <div key={index}>
-        <LitterProfileContainer litter={litter}/>
+        <LitterCard litter={litter}/>
       </div>
     ))
 

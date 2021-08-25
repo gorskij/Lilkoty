@@ -1,0 +1,1 @@
+.litter-card{display:flex;flex-direction:row;justify-content:space-evenly;background-color:#7b9fec;border:3px solid #802e2e;margin:5px;padding:20px}.litter-name{width:30%;padding:5px 0 0 0;font-family:'Verdana';text-align:center;color:#222e3d}.litter-date_of_creation{text-align:center;width:30%;color:#6e08aa}.litters-title{text-align:center}.litter-profile-img{width:30%}
