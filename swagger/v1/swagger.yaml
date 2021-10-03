@@ -15,33 +15,33 @@ paths:
           content:
             application/json:
               example:
-              - id: 578
+              - id: 805
                 name: breed_name
-                image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdVlGIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ae8c386bbc0a743e8a69cf42adc94898d7966a02/testst.png"
+                image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdTRJIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--bc4a283a6447cfae7334359a545419b431091457/testst.png"
                 history: history
                 physical_attributes: physical_attributes
                 allergy_informations: allergy_informations
-              - id: 577
+              - id: 804
                 name: breed_name
-                image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdVVGIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a9abf3e45fc821a0edaf333a313ffe3263f0682f/testst.png"
+                image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdTBJIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f1c132bd296def55531e4dd5f7a6a6b89f9212ae/testst.png"
                 history: history
                 physical_attributes: physical_attributes
                 allergy_informations: allergy_informations
-              - id: 576
+              - id: 803
                 name: breed_name
-                image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdVFGIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--af4334a9dfc27dc18c6f43b4160459565dfa5078/testst.png"
+                image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdXdJIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--bdf253875ff2a4058ae1a11ab245c8684a5e161f/testst.png"
                 history: history
                 physical_attributes: physical_attributes
                 allergy_informations: allergy_informations
-              - id: 575
+              - id: 802
                 name: breed_name
-                image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdU1GIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--d8314c5503aec637a762868a6ff29ab02b30ab2f/testst.png"
+                image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdXNJIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--145027acedfaed3279e0db078ae7b4a00f28b663/testst.png"
                 history: history
                 physical_attributes: physical_attributes
                 allergy_informations: allergy_informations
-              - id: 574
+              - id: 801
                 name: breed_name
-                image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdUlGIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0dfe9a5c36325ca8df86ab158b031e55aaec7104/testst.png"
+                image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdW9JIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--481efe1d8a7dcf677232b5ab993d6264a5f2a978/testst.png"
                 history: history
                 physical_attributes: physical_attributes
                 allergy_informations: allergy_informations
@@ -62,148 +62,12 @@ paths:
           content:
             application/json:
               example:
-                id: 583
+                id: 810
                 name: breed_name
-                image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdXNGIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f791f55641c204ff6e54229b63df2c689eb270cb/testst.png"
+                image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdk1JIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6833f0e2db9c485cd231ec5ff6ae28bb4ed444e2/testst.png"
                 history: history
                 physical_attributes: physical_attributes
                 allergy_informations: allergy_informations
-  "/api/v1/cats/index":
-    get:
-      summary: list cats
-      tags:
-      - Cats
-      responses:
-        '200':
-          description: successful
-          content:
-            application/json:
-              example:
-              - id: 440
-                name: cat_name
-                colour: colour
-                status: available
-                breed:
-                  id: 588
-                  name: breed_name
-                breeding: breeding_name
-                date_of_birth: '2018-02-03'
-                sex: male
-                images: []
-                lineage_url: 
-                mother_id: 
-                father_id: 
-                litter_id: 
-                health: 
-                personality: 
-                profile_image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdlVGIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--fffafc95f05364e7a9197b10c8274ddc6fe4172a/testst.png"
-              - id: 439
-                name: cat_name
-                colour: colour
-                status: available
-                breed:
-                  id: 587
-                  name: breed_name
-                breeding: breeding_name
-                date_of_birth: '2018-02-03'
-                sex: male
-                images: []
-                lineage_url: 
-                mother_id: 
-                father_id: 
-                litter_id: 
-                health: 
-                personality: 
-                profile_image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdk1GIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--bb9a90c073568db2993eeebb6970a2d9ca12905a/testst.png"
-              - id: 438
-                name: cat_name
-                colour: colour
-                status: available
-                breed:
-                  id: 586
-                  name: breed_name
-                breeding: breeding_name
-                date_of_birth: '2018-02-03'
-                sex: male
-                images: []
-                lineage_url: 
-                mother_id: 
-                father_id: 
-                litter_id: 
-                health: 
-                personality: 
-                profile_image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdkVGIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8dc8bbbbb95bf207cb70da97470a785b034a344f/testst.png"
-              - id: 437
-                name: cat_name
-                colour: colour
-                status: available
-                breed:
-                  id: 585
-                  name: breed_name
-                breeding: breeding_name
-                date_of_birth: '2018-02-03'
-                sex: male
-                images: []
-                lineage_url: 
-                mother_id: 
-                father_id: 
-                litter_id: 
-                health: 
-                personality: 
-                profile_image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdThGIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--0c79ac7fbb62cf571801e03f8b606efe4cbf5993/testst.png"
-              - id: 436
-                name: cat_name
-                colour: colour
-                status: available
-                breed:
-                  id: 584
-                  name: breed_name
-                breeding: breeding_name
-                date_of_birth: '2018-02-03'
-                sex: male
-                images: []
-                lineage_url: 
-                mother_id: 
-                father_id: 
-                litter_id: 
-                health: 
-                personality: 
-                profile_image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdTBGIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ff1f5863e8c6d1f909a48846a090c5f58837b750/testst.png"
-  "/api/v1/cats/show/{id}":
-    get:
-      summary: show cat
-      tags:
-      - Cats
-      parameters:
-      - name: id
-        in: path
-        required: true
-        schema:
-          type: integer
-      responses:
-        '200':
-          description: successful
-          content:
-            application/json:
-              example:
-                id: 445
-                name: cat_name
-                colour: colour
-                status: available
-                breed:
-                  id: 593
-                  name: breed_name
-                breeding: breeding_name
-                date_of_birth: '2018-02-03'
-                sex: male
-                images: []
-                lineage_url: 
-                mother_id: 
-                father_id: 
-                litter_id: 
-                health: 
-                personality: 
-                profile_image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdjhGIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c1b3684d28a28e4890011c109aa50a9d1e62ad56/testst.png"
   "/api/v1/cats/available":
     get:
       summary: available cat
@@ -215,96 +79,91 @@ paths:
           content:
             application/json:
               example:
-              - id: 446
+              - id: 607
                 name: cat_name
                 colour: colour
                 status: available
                 breed:
-                  id: 594
+                  id: 813
                   name: breed_name
                 breeding: breeding_name
                 date_of_birth: '2018-02-03'
                 sex: male
                 images: []
                 lineage_url: 
-                mother_id: 
-                father_id: 
-                litter_id: 
-                health: 
+                litter:
+                  id: 171
+                  name: litter_name
                 personality: 
-                profile_image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZ0VHIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e0bf8d343b69a83c6bae53ad9a6d2f3486e164d2/testst.png"
-              - id: 447
+                profile_image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdm9JIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--affe0fc31d6c3916209738b2a34e415de8e23398/testst.png"
+              - id: 608
                 name: cat_name
                 colour: colour
                 status: available
                 breed:
-                  id: 595
+                  id: 814
                   name: breed_name
                 breeding: breeding_name
                 date_of_birth: '2018-02-03'
                 sex: male
                 images: []
                 lineage_url: 
-                mother_id: 
-                father_id: 
-                litter_id: 
-                health: 
+                litter:
+                  id: 171
+                  name: litter_name
                 personality: 
-                profile_image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZ01HIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--75f8e43ecce49fe624175ec2f2b809f22a32870a/testst.png"
-              - id: 448
+                profile_image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdndJIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--cb9a0ba9f58e8c05b2a383c7e7df4a4a11cff54d/testst.png"
+              - id: 609
                 name: cat_name
                 colour: colour
                 status: available
                 breed:
-                  id: 596
+                  id: 815
                   name: breed_name
                 breeding: breeding_name
                 date_of_birth: '2018-02-03'
                 sex: male
                 images: []
                 lineage_url: 
-                mother_id: 
-                father_id: 
-                litter_id: 
-                health: 
+                litter:
+                  id: 171
+                  name: litter_name
                 personality: 
-                profile_image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZ1VHIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--36b4e7a8319fd0d44d11a5a56a6ee534e08b4b66/testst.png"
-              - id: 449
+                profile_image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBdjRJIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--863bfa082b3a144ca72ff1a9b5fd6d55945ac7e2/testst.png"
+              - id: 610
                 name: cat_name
                 colour: colour
                 status: available
                 breed:
-                  id: 597
+                  id: 816
                   name: breed_name
                 breeding: breeding_name
                 date_of_birth: '2018-02-03'
                 sex: male
                 images: []
                 lineage_url: 
-                mother_id: 
-                father_id: 
-                litter_id: 
-                health: 
+                litter:
+                  id: 171
+                  name: litter_name
                 personality: 
-                profile_image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZ2NHIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1480857f6d2639d5b13b791e2b79e88151d2e9df/testst.png"
-              - id: 450
+                profile_image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZ0FKIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--8b2681f6fb53192364e07a371c8940ddc7d95448/testst.png"
+              - id: 611
                 name: cat_name
                 colour: colour
                 status: available
                 breed:
-                  id: 598
+                  id: 817
                   name: breed_name
                 breeding: breeding_name
                 date_of_birth: '2018-02-03'
                 sex: male
                 images: []
                 lineage_url: 
-                mother_id: 
-                father_id: 
-                litter_id: 
-                health: 
+                litter:
+                  id: 171
+                  name: litter_name
                 personality: 
-                profile_image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZ2tHIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--961d7315fde9f95f3e4f3058c1376c14300f45bd/testst.png"
+                profile_image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZ0lKIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--15073e11085df090e9ed232a339a4bf45723ff9b/testst.png"
   "/api/v1/litters/index":
     get:
       summary: list litters
@@ -316,26 +175,26 @@ paths:
           content:
             application/json:
               example:
-              - id: 115
+              - id: 172
                 name: litter_name
                 date_of_creation: '2018-02-03'
-                profile_image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZzRHIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6f378cbb4e400e32a70d4bad5343b44f765016f3/testst.png"
-              - id: 116
+                profile_image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZ2NKIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--14c7eebcecfa8769631b8e89eb1e37ace6c80ce8/testst.png"
+              - id: 173
                 name: litter_name
                 date_of_creation: '2018-02-03'
-                profile_image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBaE1HIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9156929d9d595390e12bd0fbac1899c256053a99/testst.png"
-              - id: 117
+                profile_image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBZ3dKIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c7b66c1ab9a9a5c771f1d64369b16c56711fb4c5/testst.png"
+              - id: 174
                 name: litter_name
                 date_of_creation: '2018-02-03'
-                profile_image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBaGdHIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--99f9ddf395cd34da959e055ca1eba6541e13db25/testst.png"
-              - id: 118
+                profile_image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBaEVKIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--6d01809ec7c6f30557b46c215cecb61c4276e40f/testst.png"
+              - id: 175
                 name: litter_name
                 date_of_creation: '2018-02-03'
-                profile_image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBaDBHIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f296db4e35f9186c634f3b8b51f98d414290e5c5/testst.png"
-              - id: 119
+                profile_image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBaFlKIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4d45555fb05e40ff52b15f0c82c426887bc4f74f/testst.png"
+              - id: 176
                 name: litter_name
                 date_of_creation: '2018-02-03'
-                profile_image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBaUlHIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c266317d56fd15af0be6d80da8bb1bc817e300fd/testst.png"
+                profile_image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBaHNKIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c0e3178747cc1cfd2a1d0514f323ab9d5509c3c0/testst.png"
   "/api/v1/litters/show/{id}":
     get:
       summary: show litter
@@ -353,36 +212,42 @@ paths:
           content:
             application/json:
               example:
-                id: 124
+                id: 181
                 name: litter_name
                 mother:
-                  id: 469
+                  id: 630
                   name: cat_name
                   colour: colour
                   status: unavailable
                   breed:
-                    id: 617
+                    id: 836
                     name: breed_name
                   breeding: breeding_name
                   date_of_birth: '2018-02-03'
                   sex: male
-                  profile_image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBamdHIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--2845aed6c08b713b18f8a615037317fdef67ab91/testst.png"
+                  images: []
+                  lineage_url: 
+                  personality: 
+                  profile_image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBakVKIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--253ecc6343dcbaebaf568cd8db1f8999ee66a9fc/testst.png"
                 father:
-                  id: 470
+                  id: 631
                   name: cat_name
                   colour: colour
                   status: unavailable
                   breed:
-                    id: 618
+                    id: 837
                     name: breed_name
                   breeding: breeding_name
                   date_of_birth: '2018-02-03'
                   sex: male
-                  profile_image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBam9HIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--684aebbb8a603245a58ce2ef94a697de16bfc3ca/testst.png"
+                  images: []
+                  lineage_url: 
+                  personality: 
+                  profile_image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBak1KIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--54954cbf9e5572a387e1542363aa44d6c553762c/testst.png"
                 kittens: []
                 date_of_creation: '2018-02-03'
                 images: []
-                profile_image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBanNHIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5c2ec44a74d54b2283f6b4c401cd64b0fe4bcd21/testst.png"
+                profile_image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBalFKIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--3a4b97829e240c98e4847b57d9bab9e6719b265c/testst.png"
   "/api/v1/news/index":
     get:
       summary: list news
@@ -394,34 +259,34 @@ paths:
           content:
             application/json:
               example:
-              - id: 384
+              - id: 708
                 title: title
-                image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBandHIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--fbbf5d069768bff8d310562a56cd661920dde176/testst.png"
+                image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBalVKIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--9069f9ff701cd5b33a070d4f39ca325d01fef6ff/testst.png"
                 content: content
                 video_url: video_url
-              - id: 385
+              - id: 709
                 title: title
-                image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBajBHIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--cace67176ccd27f9587be53b93d3e8f2408554c8/testst.png"
+                image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBallKIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--021e98379855bbc43910e16fae7b13eaea98153d/testst.png"
                 content: content
                 video_url: video_url
-              - id: 386
+              - id: 710
                 title: title
-                image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBajRHIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--50b71c36bbcce01e5ab8c09cd318e3321c903590/testst.png"
+                image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBamNKIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--f130ff9f4aa91925e3fd5396c677ce6c9aec4008/testst.png"
                 content: content
                 video_url: video_url
-              - id: 387
+              - id: 711
                 title: title
-                image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBajhHIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--c9cb2729f30f4e2e805bfd948f6f2e17c74cda26/testst.png"
+                image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBamdKIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e36e508c8948eb92500558d6814a7575edc30432/testst.png"
                 content: content
                 video_url: video_url
-              - id: 388
+              - id: 712
                 title: title
-                image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBa0FHIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e661bd3b7673e9300b464020bf7dfd443a04be74/testst.png"
+                image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBamtKIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--902188a93964f6f45f38e698bcc450f9df18837a/testst.png"
                 content: content
                 video_url: video_url
-              - id: 389
+              - id: 713
                 title: title
-                image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBa0VHIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--e6e069e430ea2441bb29786e0a7ad3b635a207e9/testst.png"
+                image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBam9KIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5cf557270fb6e57d3d9c21579aee4035fec1b15a/testst.png"
                 content: content
                 video_url: video_url
   "/api/v1/news/relevant?news_limit={news_limit}":
@@ -441,19 +306,19 @@ paths:
           content:
             application/json:
               example:
-              - id: 390
+              - id: 714
                 title: title
-                image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBa0lHIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--bee6863638db2c07a7ee532254ba9893d9040a36/testst.png"
+                image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBanNKIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--1ffca45be9f33d346749b61d7a2004673fc7ade3/testst.png"
                 content: content
                 video_url: video_url
-              - id: 391
+              - id: 715
                 title: title
-                image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBa01HIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--bb9e6188112b1613edb7fe4bf0aa6c09467f9db5/testst.png"
+                image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBandKIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--4f92e83b11fdb7fe3f96781718287030d433beb9/testst.png"
                 content: content
                 video_url: video_url
-              - id: 392
+              - id: 716
                 title: title
-                image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBa1FHIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--5925e90044b155962aeff1390d6850f1448f4179/testst.png"
+                image_url: "/rails/active_storage/blobs/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBajBKIiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--41d9bc224659f4b09431c29529ea6d2d079cc683/testst.png"
                 content: content
                 video_url: video_url
 servers:
