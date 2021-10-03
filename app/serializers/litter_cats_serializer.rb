@@ -1,9 +1,13 @@
 # frozen_string_literal: true
 
-class CatSimplifiedSerializer < ActiveModel::Serializer
+class LitterCatsSerializer < ActiveModel::Serializer
   include Rails.application.routes.url_helpers
   attributes :id, :name, :colour, :status, :breed, :breeding, :date_of_birth, :sex,
-             :profile_image_url
+             :images, :lineage_url, :personality, :profile_image_url
+
+  def images
+    ActiveModelSerializers::SerializableResource.new(object.images).as_json
+  end
 
   def breed
     ActiveModelSerializers::SerializableResource.new(

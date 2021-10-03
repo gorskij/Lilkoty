@@ -3,7 +3,11 @@
 require 'swagger_helper'
 
 RSpec.describe 'Cats', type: :request do
-  before { FactoryBot.create_list(:cat, 5, status: 'available') }
+  before do
+    FactoryBot.create_list(:cat, 2)
+    FactoryBot.create(:litter, mother: Cat.last, father: Cat.last(2).first)
+    FactoryBot.create_list(:cat, 5, status: 'available', litter: Litter.last)
+  end
 
   after do |example|
     example.metadata[:response][:content] = {
@@ -11,28 +15,6 @@ RSpec.describe 'Cats', type: :request do
         example: JSON.parse(response.body, symbolize_names: true)
       }
     }
-  end
-
-  path '/api/v1/cats/index' do
-    get('list cats') do
-      tags 'Cats'
-      produces 'application/json'
-      response(200, 'successful') do
-        run_test!
-      end
-    end
-  end
-
-  path '/api/v1/cats/show/{id}' do
-    let(:id) { Cat.last.id }
-    get('show cat') do
-      tags 'Cats'
-      produces 'application/json'
-      parameter name: :id, in: :path, type: :integer, required: true
-      response(200, 'successful') do
-        run_test!
-      end
-    end
   end
 
   path '/api/v1/cats/available' do
