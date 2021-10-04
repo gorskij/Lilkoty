@@ -7,9 +7,8 @@ Rails.application.routes.draw do
   ActiveAdmin.routes(self)
   namespace :api do
     namespace :v1 do
-      get 'cats/index'
-      get 'cats/show/:id', to: 'cats#show'
       get 'cats/available'
+      get 'cats/from_our_breeding'
       get 'litters/index'
       get 'litters/show/:id', to: 'litters#show'
       get 'breeds/index'

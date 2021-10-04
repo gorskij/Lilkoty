@@ -12,6 +12,7 @@ class Cat < ApplicationRecord
   validates :profile_image, attached: true, content_type: ['image/png', 'image/jpg', 'image/jpeg']
 
   scope :available, -> { where(status: 'available') }
+  scope :from_our_breeding, -> { where(status: 'our-cat') }
 
   private
 
@@ -22,8 +23,8 @@ class Cat < ApplicationRecord
   end
 
   def validate_status
-    return unless status != 'available' && status != 'not-available' && status != 'reserved' && status != 'new-home'
+    return if %w[available not-available our-cat reserved new-home].include?(status)
 
-    errors.add :base, 'error status invalid, can be available, not-available, new-home or reserved'
+    errors.add :base, 'error status invalid, can be available, not-available, our-cat, new-home or reserved'
   end
 end

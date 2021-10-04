@@ -11,6 +11,16 @@ module Api
         ).with_attached_profile_image
         render json: cat, each_serializer: CatSerializer
       end
+
+      def from_our_breeding
+        cat = Cat.from_our_breeding.includes(
+          { mother: :profile_image_blob },
+          { father: :profile_image_blob },
+          { images: :image_blob },
+          :breed
+        ).with_attached_profile_image
+        render json: cat, each_serializer: CatFromOurBreedingSerializer
+      end
     end
   end
 end

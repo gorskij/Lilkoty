@@ -7,6 +7,7 @@ RSpec.describe 'Cats', type: :request do
     FactoryBot.create_list(:cat, 2)
     FactoryBot.create(:litter, mother: Cat.last, father: Cat.last(2).first)
     FactoryBot.create_list(:cat, 5, status: 'available', litter: Litter.last)
+    FactoryBot.create_list(:cat, 5, status: 'our-cat', litter: Litter.last, mother: Cat.last, father: Cat.last)
   end
 
   after do |example|
@@ -18,7 +19,17 @@ RSpec.describe 'Cats', type: :request do
   end
 
   path '/api/v1/cats/available' do
-    get('available cat') do
+    get('available cats') do
+      tags 'Cats'
+      produces 'application/json'
+      response(200, 'successful') do
+        run_test!
+      end
+    end
+  end
+
+  path '/api/v1/cats/from_our_breeding' do
+    get('from_our_breeding cats') do
       tags 'Cats'
       produces 'application/json'
       response(200, 'successful') do
