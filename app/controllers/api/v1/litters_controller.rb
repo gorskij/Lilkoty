@@ -4,6 +4,7 @@ module Api
   module V1
     class LittersController < ApplicationController
       def initialize
+        super
         @cat_includes = [
           :profile_image_blob,
           :breed,
