@@ -10,8 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_08_04_123852) do
-
+ActiveRecord::Schema.define(version: 20_211_004_213_929) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -86,24 +85,23 @@ ActiveRecord::Schema.define(version: 2021_08_04_123852) do
     t.datetime "updated_at", precision: 6, null: false
   end
 
-  create_table "cats", force: :cascade do |t|
-    t.string "name"
-    t.bigint "mother_id"
-    t.bigint "father_id"
-    t.string "status"
-    t.string "sex"
-    t.string "colour"
-    t.string "breeding"
-    t.integer "litter_id"
-    t.date "date_of_birth"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.string "lineage_url"
-    t.integer "breed_id"
-    t.text "health"
-    t.text "personality"
-    t.index ["father_id"], name: "index_cats_on_father_id"
-    t.index ["mother_id"], name: "index_cats_on_mother_id"
+  create_table 'cats', force: :cascade do |t|
+    t.string 'name'
+    t.bigint 'mother_id'
+    t.bigint 'father_id'
+    t.string 'status'
+    t.string 'sex'
+    t.string 'colour'
+    t.string 'breeding'
+    t.integer 'litter_id'
+    t.date 'date_of_birth'
+    t.datetime 'created_at', precision: 6, null: false
+    t.datetime 'updated_at', precision: 6, null: false
+    t.string 'lineage_url'
+    t.integer 'breed_id'
+    t.text 'personality'
+    t.index ['father_id'], name: 'index_cats_on_father_id'
+    t.index ['mother_id'], name: 'index_cats_on_mother_id'
   end
 
   create_table "configs", force: :cascade do |t|

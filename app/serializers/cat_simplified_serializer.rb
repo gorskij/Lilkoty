@@ -2,15 +2,7 @@
 
 class CatSimplifiedSerializer < ActiveModel::Serializer
   include Rails.application.routes.url_helpers
-  attributes :id, :name, :colour, :status, :breed, :breeding, :date_of_birth, :sex,
-             :profile_image_url
-
-  def breed
-    ActiveModelSerializers::SerializableResource.new(
-      object.breed,
-      serializer: BreedSimplifiedSerializer
-    ).as_json
-  end
+  attributes :id, :name, :profile_image_url
 
   def profile_image_url
     rails_blob_path(object.profile_image, only_path: true)

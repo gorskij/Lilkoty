@@ -5,7 +5,7 @@ ActiveAdmin.register Cat do
   menu priority: 1
 
   permit_params :name, :mother_id, :father_id, :status, :sex, :colour, :breed_id, :breeding, :litter_id, :date_of_birth,
-                :lineage_url, :health, :personality, :profile_image
+                :lineage_url, :personality, :profile_image
 
   includes :mother, :father, :litter, :breed
 
@@ -24,7 +24,7 @@ ActiveAdmin.register Cat do
       tab 'Basic' do
         f.inputs 'Basic Details' do
           f.input :name, placeholder: 'name'
-          f.input :status, as: :select, collection: %w[available not-available reserved new-home]
+          f.input :status, as: :select, collection: %w[available our-cat not-available reserved new-home]
           f.input :sex, as: :select, collection: %w[male female]
           f.input :date_of_birth
           f.input :breed, collection: Breed.all
@@ -45,7 +45,6 @@ ActiveAdmin.register Cat do
 
       tab 'Additional' do
         f.inputs 'Additional Details' do
-          f.input :health, placeholder: 'health information'
           f.input :personality, placeholder: 'personality information'
         end
       end
@@ -68,7 +67,6 @@ ActiveAdmin.register Cat do
       row :colour
       row :breeding
       row :lineage_url
-      row :health
       row :personality
       row :profile_image do |ad|
         image_tag rails_blob_path(ad.profile_image, only_path: true), size: '50%'

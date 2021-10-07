@@ -7,21 +7,21 @@ class LitterSerializer < ActiveModel::Serializer
   def mother
     ActiveModelSerializers::SerializableResource.new(
       object.mother,
-      serializer: CatSimplifiedSerializer
+      serializer: LitterCatsSerializer
     ).as_json
   end
 
   def father
     ActiveModelSerializers::SerializableResource.new(
       object.father,
-      serializer: CatSimplifiedSerializer
+      serializer: LitterCatsSerializer
     ).as_json
   end
 
   def kittens
     ActiveModelSerializers::SerializableResource.new(
       object.kittens,
-      each_serializer: CatSimplifiedSerializer
+      each_serializer: LitterCatsSerializer
     ).as_json
   end
 
