@@ -1,0 +1,59 @@
+.cat-breeding-card {
+  display:flex;
+  flex-direction: column;
+  text-transform: capitalize;
+  text-align: center;
+  max-width: 1280px;
+  .slide-show {
+    opacity: 1;
+  }
+}
+.breeding-cat-row {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+.cat-breeding-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.breeding-cat-informations {
+  text-transform: capitalize;
+  text-align: center;
+  background-color: var(--background-brown);
+  color: var(--white-color);
+}
+.breeding-cat-parents {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  img {
+    width: 512px;
+    height: 288px;
+  }
+}
+@media only screen and (max-width: 1900px) {
+  .cat-breeding-card {
+    max-width: 768px;
+    max-height: 700px;
+    width: 100%;
+  }
+  .breeding-cat-parents {
+    max-width: 768px;
+    img {
+      max-width: 256px;
+      max-height: 144px;
+      width: 100%;
+      height: auto;
+    }
+  }
+  .slide-show {
+    img {
+      width: 100%;
+      max-width: 768px;
+      height: auto;
+    }
+  }
+}

@@ -16,7 +16,7 @@ const SmallScreenMenu = () => {
         <nav >
           <ul onClick={changeCheckState}>
             <li><Link to="/">Home </Link> </li>
-            <li><Link to="/">Nasze Koty </Link> </li>
+            <li><Link to="/breeding_cats">Nasze Koty </Link> </li>
             <li><Link to="/available_cats">Kocięta </Link> </li>
             <li><Link to="/">Informacje </Link> </li>
           </ul>

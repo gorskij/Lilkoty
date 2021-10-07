@@ -1,75 +1,48 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import CatCard from '../../catcard/fullscreen/CatCard'
 import MobileCatCard from '../../catcard/mobiledevice/MobileCatCard'
 import './available_cats_styles.scss'
-import PropTypes from 'prop-types'
-class AvailableCats extends React.Component {
-  constructor (props) {
-    super(props)
-    this.state = {
-      cats: [],
-      classnameClick: false
-    }
-    this.changingClasses = this.changingClasses.bind(this)
-  }
+const AvailableCats = () => {
+  const [cats, setCats] = useState([])
+  const [currentBox, setCurrentBox] = useState(null)
 
-  componentDidMount () {
+  useEffect(() => {
     const url = '/api/v1/cats/available'
-    fetch(url)
-      .then((response) => {
-        if (response.ok) {
-          return response.json()
-        }
-        throw new Error('Network response was not ok.')
-      })
-      .then((response) => this.setState({ cats: response }))
-      .catch((error) => console.log(error))
-  }
 
-  toggleAllBoxes (e) {
-    const boxes = Array.from(document.getElementsByTagName('div'))
-    boxes.forEach((element) => {
-      if (element.classList.contains('active') === true) {
-        element.classList.toggle('active')
-      }
-    })
-    e.currentTarget.classList.toggle('active')
-  }
-
-  changingClasses (e) {
-    if (e.currentTarget.classList.contains('active') === true) {
-      e.currentTarget.classList.toggle('active')
-    } else {
-      this.toggleAllBoxes(e)
+    const renderCats = async () => {
+      await fetch(url)
+        .then((response) => {
+          if (response.ok) {
+            return response.json()
+          }
+          throw new Error('Response was not ok')
+        })
+        .then((response) => setCats(response))
     }
+    renderCats()
+  }, [])
+  const setActiveBox = (boxId) => {
+    setCurrentBox(boxId)
   }
 
-  render () {
-    const { cats } = this.state
-
-    const allCats = cats.map((cat, index) => (
+  const allCats = cats.map((cat, index) => (
       <div key={index}>
-        <div className='cat-card-row' onClick={this.toggleAllBoxes} style={{ backgroundImage: `url(${cat.profile_image_url})` }}>
+        <div className={currentBox === index ? 'cat-card-row active' : 'cat-card-row'} onClick={(boxId) => setActiveBox(index)} style={{ backgroundImage: `url(${cat.profile_image_url})` }}>
           <CatCard cat={cat} key={index} />
         </div>
         <div className='mobile-cat-card-row'>
           <MobileCatCard cat={cat} key={index}/>
         </div>
       </div>
-    ))
+  ))
 
-    return (
+  return (
       <>
         <div className="available-cats-container">
           {allCats}
         </div>
       </>
-    )
-  }
-}
-
-AvailableCats.propTypes = {
-  match: PropTypes.object
+  )
 }
 
 export default AvailableCats

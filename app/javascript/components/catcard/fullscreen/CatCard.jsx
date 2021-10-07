@@ -10,6 +10,8 @@ const CatCard = (props) => {
       <div className='cat-active-info'>
         <div className='cat-name'>{props.cat.name}</div>
         <div className='cat-data-box'>
+          <div>Miot:</div>
+          {/* kubzon zrobi litter name */}
           <div>Data Urodzenia: {props.cat.date_of_birth}</div>
           <div>Płeć: {props.cat.sex}</div>
           <div>Kolor: {props.cat.colour}</div>

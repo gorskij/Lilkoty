@@ -10,6 +10,7 @@ const MobileCatCard = (props) => {
       <SlideShow cat={cat}></SlideShow>
       <div className='mobile-cat-info'>
         <div className='mobile-cat-name'>{cat.name}</div>
+        <div>miot: </div>
         <div>data urodzenia: {cat.date_of_birth}</div>
         <div>płeć: {cat.sex}</div>
         <div>kolor: {cat.colour}</div>
