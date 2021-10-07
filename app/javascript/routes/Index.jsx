@@ -1,6 +1,6 @@
 import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import Home from '../components/home/Home'
+// import Home from '../components/home/Home'
 import Litters from '../components/Litters'
 import Litter from '../components/Litter'
 import AvailableCats from '../components/availablecats/fullscreen/AvailableCats'
@@ -17,7 +17,7 @@ export default (
    <SmallScreenMenu/>
    <div className="content">
       <Switch>
-        <Route path="/" exact component={Home} />
+        {/* <Route path="/" exact component={Home} /> */}
         <Route path="/news" exact component={News} />
         <Route path='/breeding_cats' exact component={BreedingCats} />
         <Route path="/litters" exact component={Litters} />
