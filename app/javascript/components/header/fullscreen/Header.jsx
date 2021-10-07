@@ -18,7 +18,7 @@ const Header = () => {
         <Link to="/" className="button" onClick={(tabId) => setActiveTab(0)}>
           <AiOutlineHome />
         </Link>
-        <Link to="/" className={currentTab === 1 ? 'button active' : 'button'} onClick={(tabId) => setActiveTab(1)}>Nasze&nbsp;Koty</Link>
+        <Link to="/breeding_cats" className={currentTab === 1 ? 'button active' : 'button'} onClick={(tabId) => setActiveTab(1)}>Nasze&nbsp;Koty</Link>
         <Link to="/available_cats" className={currentTab === 2 ? 'button active' : 'button'} onClick={(tabId) => setActiveTab(2)}>
           Kocięta
         </Link>
