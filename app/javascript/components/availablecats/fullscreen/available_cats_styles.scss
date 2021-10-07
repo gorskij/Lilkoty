@@ -1,0 +1,27 @@
+.available-cats-container {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  align-items: center;
+}
+.mobile-cat-card-row {
+  display: none;
+}
+.cat-card-row {
+  width: 100%;
+  overflow: hidden;
+  max-width: 1920px;
+  height: 450px;
+  margin-bottom: 5px;
+  background-position-y: 50%;
+  background-position-x: 0%;
+}
+@media only screen and (max-width: 1900px) {
+  .cat-card-row {
+    display: none;
+  }
+  .mobile-cat-card-row {
+    display: block;
+  }
+  
+}

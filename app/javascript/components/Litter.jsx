@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import CatProfileContainer from './CatProfileContainer'
+import CatCard from './catcard/fullscreen/CatCard'
 import '../../assets/stylesheets/litter_styles.scss'
 import PropTypes from 'prop-types'
 class Litter extends React.Component {
@@ -39,15 +39,15 @@ class Litter extends React.Component {
     const { litter } = this.state
 
     const allKittens = litter.kittens.map((kitten, index) => (
-        <CatProfileContainer cat={kitten} key={index}/>
+        <CatCard cat={kitten} key={index}/>
     ))
 
     return (
       <>
           <h1 className="container-title">Rodzice</h1>
           <div className="parents-flex-container">
-            <CatProfileContainer cat={litter.mother}/>
-            <CatProfileContainer cat={litter.father}/>
+            <CatCard cat={litter.mother}/>
+            <CatCard cat={litter.father}/>
           </div>
           <h1 className="container-title">Kocięta</h1>
           <div className="kittens-flex-container">

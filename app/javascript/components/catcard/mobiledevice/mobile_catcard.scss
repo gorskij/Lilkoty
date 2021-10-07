@@ -1,0 +1,25 @@
+.mobile-cat-card {
+  display: flex;
+  flex-flow: column;
+  max-height: 700px;
+}
+.mobile-cat-info {
+  background-color: var(--background-brown);
+  color: var(--white-color);
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+  font-size: 1.3rem;
+  max-width: 768px;
+  text-transform: capitalize;
+}
+.personality {
+  text-transform: none;
+  font-size: 1rem;
+}
+.status {
+  font-size: 1.5rem;
+}
+.mobile-cat-name {
+  font-size: 1.5rem;
+}
