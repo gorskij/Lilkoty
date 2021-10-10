@@ -2,7 +2,7 @@
 
 class CatAttachedImageSerializer < ActiveModel::Serializer
   include Rails.application.routes.url_helpers
-  attributes :id, :url, :date
+  attributes :id, :url
 
   def url
     rails_blob_path(object.image, only_path: true)

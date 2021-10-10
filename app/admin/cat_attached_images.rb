@@ -4,7 +4,7 @@ ActiveAdmin.register CatAttachedImage do
   config.create_another = true
   menu priority: 2
 
-  permit_params :cat_id, :date, :image
+  permit_params :cat_id, :image
 
   includes image_attachment: :blob
 
@@ -15,7 +15,6 @@ ActiveAdmin.register CatAttachedImage do
       tab 'Basic' do
         f.inputs 'Basic Details' do
           f.input :cat
-          f.input :date
           f.input :image, as: :file
         end
       end
@@ -26,7 +25,6 @@ ActiveAdmin.register CatAttachedImage do
   show do |_t|
     attributes_table do
       row :cat
-      row :date
       row :image do |ad|
         image_tag rails_blob_path(ad.image, only_path: true), size: '50%'
       end
